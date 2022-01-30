@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.21)  30 JAN 2022 15:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.21)  30 JAN 2022 15:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -894,48 +894,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--80
 
  []
 
-Runaway argument?
- 
-./MATH440HW_1.tex:81: Paragraph ended before \align* was complete.
-<to be read again> 
-                   \par 
-l.81 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
 
-./MATH440HW_1.tex:81: Missing $ inserted.
-<inserted text> 
-                $
-l.81 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+Underfull \hbox (badness 10000) in paragraph at lines 85--89
 
-./MATH440HW_1.tex:81: Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.81 
-     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+ []
 
-./MATH440HW_1.tex:81: Display math should end with $$.
-<to be read again> 
-                   \tex_par:D 
-l.81 
-     
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-./MATH440HW_1.tex:82: Misplaced \cr.
+./MATH440HW_1.tex:94: Misplaced \cr.
 \math@cr@@@ ->\cr 
                   
-l.82 \end{align*}
+l.94 \end{align*}
                  
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -943,42 +910,52 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-./MATH440HW_1.tex:82: Misplaced \noalign.
+./MATH440HW_1.tex:94: Misplaced \noalign.
 \math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
                                                   {\vskip #1\relax }
-l.82 \end{align*}
+l.94 \end{align*}
                  
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
-./MATH440HW_1.tex:82: Misplaced \noalign.
+./MATH440HW_1.tex:94: Misplaced \noalign.
 \black@ #1->\noalign 
                      {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
-l.82 \end{align*}
+l.94 \end{align*}
                  
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
 
-Overfull \hbox (172.7316pt too wide) detected at line 82
+Overfull \hbox (139.96983pt too wide) detected at line 94
 []
  []
 
-./MATH440HW_1.tex:82: Extra }, or forgotten \endgroup.
+./MATH440HW_1.tex:94: Too many }'s.
 \endalign ->\math@cr \black@ \totwidth@ \egroup 
                                                 \ifingather@ \restorealignst...
-l.82 \end{align*}
+l.94 \end{align*}
                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
 
-./MATH440HW_1.tex:82: Missing $ inserted.
+
+./MATH440HW_1.tex:94: LaTeX Error: \begin{document} ended by \end{align*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.94 \end{align*}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./MATH440HW_1.tex:94: Missing $ inserted.
 <inserted text> 
                 $
-l.82 \end{align*}
+l.94 \end{align*}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -986,35 +963,44 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./MATH440HW_1.tex:82: Display math should end with $$.
+./MATH440HW_1.tex:94: Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.82 \end{align*}
+l.94 \end{align*}
                  
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
+
+./MATH440HW_1.tex:94: Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.94 \end{align*}
+                 
+Things are pretty mixed up, but I think the worst is over.
 
 [2] (./MATH440HW_1.aux) ) 
 Here is how much of TeX's memory you used:
  23378 strings out of 478542
  601606 string characters out of 5854402
- 1025390 words of memory out of 5000000
+ 1030390 words of memory out of 5000000
  40951 multiletter control sequences out of 15000+600000
  411886 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,8n,108p,727b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 102i,10n,108p,727b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2021/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:
-/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2
-021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/pub
-lic/amsfonts/symbols/msbm10.pfb>
-Output written on MATH440HW_1.pdf (2 pages, 90493 bytes).
+s/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex
+10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c
+:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/
+2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfo
+nts/symbols/msam10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/
+symbols/msbm10.pfb>
+Output written on MATH440HW_1.pdf (2 pages, 110069 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 64 PDF objects out of 1000 (max. 8388607)
+ 39 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
