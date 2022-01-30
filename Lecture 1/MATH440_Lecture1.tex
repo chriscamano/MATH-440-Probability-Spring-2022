@@ -1,0 +1,116 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{mathtools,amssymb}
+\usepackage{tikz}
+\usepackage{xcolor}
+\pgfplotsset{compat=1.7}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH440 Lecture 1}
+\date{1/27/2022}
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+
+\begin{document}
+\maketitle
+\textbf{Opening notes}\\
+
+
+\section{Random experiment }: Sample outcomes
+
+
+
+Sample Space: Finite Sample Space =$\{S_1,S_2,....S_n\}$
+
+Countable infite Saple Space: $S=\{S_1,S_2,....\}$
+
+Continuous
+S=$\mathbb{R}$ $S\subset \mathbb{R}$
+\\
+Countable infinite sample space examle:
+
+Toss a coin until head occurs.
+S=\{H,TH,TTH,TTTH,...T...TH...\}
+\\\\
+\textbf{Events}
+An event A is a subset of a sample space S $A \subset S$.We assume that S is also an event and that 0 is the \textbf{null event/empty set}.
+\\\\
+- Examples of events:\\
+Experiment:Roll a dice therefore S=\{1,2,3,4,5,6\}
+An event of this sample space A such that even numbers occur would be:\\ A=\{2,4,6\}\\
+Event B is number divisible by 3 B=\{3,6\}
+\\\\
+- Example 2\\
+Experiment: Roll two dice\\
+1. Describe sample space
+2. Describe the events A the sum of two faces is 7,Event b the value of the first face is smaller than the second. \\
+1. The sample space $S=\{1,2,3,4,5,6\} x \{1,2,3,4,5,6\}$\\\\
+2. Event $A=\{(1,6),(6,1),(2,5),(5,2)\}$ The diagonal of the matrix\\\\
+Event $B=\{(1,1)...(1,6),(2,3)...(2,6),(3,4)...(3,6),(4,5),(4,6),(5,6)\}$The upper triangle of the matrix
+\\\\
+$S=\mathbb{R}^2,
+S=\{(x,y)|x \in \mathbb{R}, y\in \mathbb{R}\}$\\
+$A=\{(x,y)|x^2+y^2 \leq 4$ Disc of radius 2\\
+$B=\{(x,y)|y \leq x^2$ Area under the parabola $x^2$\\\\
+\section{Algebra of events }\\
+\textbf{Union}:\\
+The union of two events A and B denoted by $A \cup B$. $A \cup B$ is an event whose outcomes beling to either A or B or both. This can be visualized by a venn diagram with overlapping circles representing sets A and B overlapping eachother.
+\\\\
+\textbf{Intersection}:\\
+The Intersection of two events A and B denoted as $A \cap B$ is an event whose outcomes belong to both A and B. This can be visualized as the area between two overlapping circles in a venn diagram. \\
+\\\\
+Union corresponds to the addition operator and Intersection as a multiplication.\\\\
+\textbf{Complement}:\\
+The complement of a set A denoted as $A^c$ is the set consisting of elements within a sample space not included in A. Essentially this is everything outside of A. This can be visualized by drawing a ven diagram with one ciricle with everything outside of the set shaded. \\\\
+
+\[
+  A \cap ( B \cup C) \neq ( A \cap B ) \cup C
+\]
+De Morgan Rules:\\
+\[
+  ( A \cup B)^c = A^c \cap B^c
+\]
+\[
+  (A \cap B)^c= A^c \cup B^c
+\]
+\section{Special Cases}\\
+Assume A and B are two events. \\
+1. Exactly one event occurs:\\
+Just A: $A \cap B^C$ , Just B $( A^c \cap B)$ $\therefore A \cap B^c \cup ( A^c \cap B)$= exactly one event occurs.\\
+2. At most one event occurs: $$(A \cap B)^c$$\\
+3. At least one event occurs: $$ A \cup B$$\\
+\\\\
+\textbf{Mutually Exclusive Events}:\\
+Two events A and B are mutually exclusive(\textbf{disjoint}) if and only if:
+\[
+  A \cap B = \{\}
+\]
+\\\\
+Example of mutual Exclusivity:\\
+S=\{1,2,3,4,5,6\}, A = event, C is odd.
+\[
+  \therefore A \cap C = \{\} \therefore \text{A and C are disjoint}
+\]
+Example of mutual Exclusivity 2:\\
+A= $\sum$  of faces is odd\\
+B=each face rolled is odd.
+\[
+  \therefore A \cap B = \{\} \therefore \text{A and B are disjoint}
+\]
+\section{Recap}:
+In probability you start with an experiment with known outcomes. These outcomes define the sample space and the outcome of an experiment is an event. With theses events we can use Union, Intersection, and Complement to investigate relationships. .
+\end{document}
