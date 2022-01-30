@@ -1,0 +1,125 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{mathtools,amssymb}
+\usepackage{tikz}
+\usepackage{xcolor}
+\pgfplotsset{compat = newest}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH440 PProblems 1 }
+\date{1/30/2022}
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+
+\begin{document}
+\maketitle
+\textbf{Problem set: 2,3,7,11,
+18, 19, 20, 24, 28,29}
+\section{2.2 Practice Problems}\\
+\textbf{Problem 2.2.2}\\
+ Three dice are tossed, one red, one blue, and one green . What outcomes make up the event A that the sum of the three faces showing equals 5?
+\begin{align*}
+  A=\{ (1,1,3),(1,2,2),(1,3,1),(2,1,2),(2,2,1),(3,1,1)\}
+\end{align*}
+\\\\
+\textbf{Problem 2.2.3}\\
+An urn contains six chips numbered 1 through 6. Three are drawn out. What outcomes are in the vent "Second smallest ship is 3"? Assume order is not relevant.
+\begin{align*}
+  A=\{(6,3,1),(5,3,1),(4,3,1),(6,3,2),(5,3,2),(4,3,2)\}
+\end{align*}
+\\\\
+\textbf{Problem 2.2.7}\\
+Let P be the set of right traingles with a 5" hypotenuse and whose height and length are a and b, respectively. Characterize the outcomes in P.
+\begin{align*}
+  P=\{(a,b)|a^2+b^2=25,a,b \in \mathbb{R}\}\\
+  P=\{(3,4),(4,3)\}
+\end{align*}
+\\\\
+\textbf{Problem 2.2.11}\\
+A woman has her purse snatched by two teenagers. She is subsequently shown a police lineup consisting of five suspects, incuding two perpetrators. What is the sample space associated with the experiment: "Woman picks two suspects out of lineup"? Which outcomes are in the event A: She makes at least one incorrect identification?
+\begin{align*}
+  S=\{(p_1,i_1),(p_1,i_2),(p_1,i_3),(p_2,i_1),(p_2,i_2),(p_2,i_3),(i_1,i_2),(i_1,i_3),(i_2,i_3),(p_1,p_2)\}\\ \textbf{ Where p is perp and i is innocent}\\
+  A=\{(p_1,i_1),...,(p_1,i_k),(p_2,i_1),...,(p_1,i_k),(i_1,i_2),(i_1,i_3),(i_2,i_3)\}k\in[2,3]
+\end{align*}
+\\\\
+\textbf{Problem 2.2.18}
+Find $A \cap B \cap C$ if $A =\{x|  0 \leq x \leq 4\}, B=\{x|2 \leq x \leq 6 \}, C=\{x| x \in \mathbb{Z}\}$
+\begin{align*}
+  A=\{0,1,2,3,4\}\\
+  B=\{2,3,4,5,6\}\\
+  A \cap B =\{2,3,4\}\\
+  (A\cap B)\cap C= \{2,3,4\}
+\end{align*}
+\\\\
+\textbf{Problem 2.2.19}
+An Electronic system has four components divided into two pairs. The two components of each pair are wired in parallel; the two pairs are wired in series. Let $A_{ij}$ denote the event " ith compontnt in jth pair fails", i = 1,2, j=1,2. Let A be the event System fails write A in terms of the $A_{ij}$s
+\begin{align*}
+A=(A_{11} \cap A_{21})\cap (A_{12}\cap A_{22})
+\end{align*}
+\\\\
+\textbf{Problem 2.2.20}
+Define: $A=\{x|0\leq x \leq 1 \}, B= \{x| 0\leq x \leq 3\},C=\{x| -1 \leq x \leq 2 \}$. Draw Diagrams for each.\\
+Tikz Skills still pending:
+\\\\
+\textbf{Problem 2.2.24}
+Let $A_1,A_2,...,A_k$ be any set of events defined on a sample space S. What outcomes belong to the event: \\
+\[
+  A=(A_1 \cup A_2 \cup ...\cup A_k) \cup (A^C_1 \cap A^C_2 \cap ... \cap A^C_k)
+\]
+\begin{align*}
+  A=(A_1 \cup A_2 \cup ...\cup A_k) \cup (A_1 \cap A_2 \cap ... \cap A_k)^C=S\quadd \textbf{The entire Sample Space}
+\end{align*}
+\\\\
+\textbf{Problem 2.2.28}
+Let events A and B and sample S be defined as the following intervals:
+\begin{align*}
+  S=\{x|0 \leq x \leq 10\}\\
+  A=\{x|0<x<5\}\\
+  B=\{x|3\leq x \leq 7\}
+\end{align*}'
+Characterize the following:
+\begin{align*}
+  A=\{x|0<x<5\}=\{x|1\leq x \leq 4\}\\
+  a)A^C\\
+  \quadd A^C=\{0,6,7,8,9,10\}\\\\
+  b)A \cap B \\
+  \quadd A\cap B = \{3,4\}\\\\
+  c) A\cup B\\
+  \quadd A \cup B =\{ 1,2,3,4,5,6,7\}\\\\
+  d) A\cap B^C\\
+  \quadd A \cap B^C=\{1,2\}\\\\
+  e) A^C \cup B\\
+  \quadd A^C \cup B= \{5,6,7\}\\\\
+  f) A^C \cap B^C\\
+  \quadd A^C \cap B^C= \{0,8,9,10\}
+\end{align*}
+\\\\
+\textbf{Problen 2.2.29}\\
+A coin is tossed four times and the resulting sequence of heads and. or tails is recorded Define the events A,B,and C as follows:
+\begin{align*}
+  \text{A:Exactly two heads appear}\\
+  \text{B: heads and tails alternate}\\
+  \text{C: first two tosses are heads}\\
+\end{align*}
+\begin{align*}
+  \textbf{a) Which two events are disjoint?:}\text{ B and C}\\
+  \textbf{b) Which events are subsets} A \subseteq B.
+\end{align*}
+\\\\
+\end{document}
