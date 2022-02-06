@@ -104,4 +104,49 @@ Events $A_1$ and $A_2$ are such that $A_1\cup A_2=S$ and $A_1\cap A_2=\emptyset$
 \end{bmatrix}
 \therefore p_1=\frac{3}{8},p_2=\frac{5}{8}
 \]
+\textbf{Problem 2.3.14}\\
+Three events A B and C are defined on a sample space S given that:
+\[
+  P(A)=.2 \q P(B)=.1 \q P(C)=.3
+\]
+What is the smallest possible value for:
+\[
+  P[(A \cup B \cup C}^C)]
+\]
+\[
+  P[(A \cup B \cup C)^C)]=P(A^c \cap B^c \cap C^c)
+\]
+by Demorgan's Rules. Strategy: find the union of all three sets then subtract that total from the sample space to represent the complement:
+\[
+  P(A \cup B \cup C)= P(A)+P(B)+P(C) - P(A \cap B)- P( A \cap C)-P( B \cap C) - P(A \cap B \cap C)
+\]
+\begin{align*}
+  P(A \cup B)= P(A)+P(B)-P(A\cap B) \therefore\\
+  P(A \cup B \cup C)= \textbf{$P(A \cup B)$} +P(C)- P( A \cap C)-P( B \cap C) - P(A \cap B \cap C)
+\end{align*}
+The union of A and B are largest if they are disjoint therefore:
+\[
+  P(A \cup B ) \leq P(A)+P(B)
+\]
+\[
+  P(A \cup B) \leq .2 +.1
+\]
+\[
+  P(A \cup B ) \leq .3
+\]
+Extending the same logic if $P(A \cup B)$ is disjoint from C in all ways then the union will be at its largest.
+\begin{align*}
+  \textbf{Let: } P( A \cap C)=P( B \cap C) = P(A \cap B \cap C)=0
+\end{align*}
+therefore:
+\[
+  P(A \cup B \cup C) \leq P(A \cup B)+ P(C)=.3+.3
+\]
+\[
+    P(A \cup B \cup C) \leq .6
+\]
+\[
+P[(A \cup B \cup C)^C]=1-.6=.4
+\]
+Therefore the smallest $P[(A \cup B \cup C)^C]$ could possibly be is .4  as this only occurs when the union of the three events is at its largest which occurs when the three events are disjoint.
 \end{document}
