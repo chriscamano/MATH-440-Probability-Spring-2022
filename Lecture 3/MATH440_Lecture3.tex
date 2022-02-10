@@ -1,0 +1,87 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{mathtools,amssymb}
+\usepackage{tikz}
+\usepackage{xcolor}
+\pgfplotsset{compat = newest}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH440 Lecture 3 }
+\date{2/10/2022}
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+\newcommand{\q}{\quadd}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\rtwo}{$\mathbb{R}^2$}
+\newcommand{\C}{$\mathbb{C}$}
+\newcommand{\tf}{\therefore}
+\begin{document}
+\maketitle
+\section{2.5 Independence of events}
+review: conditional probability.
+\begin{align*}
+  \text{Let s be a sample space with events }A, B \subset S\\
+  P(B)>0\\
+  P(A|B)=\frac{P \cap B}{P(B)} \therefore\\
+  P(A \cap B)=P(A|B)P(B)
+\end{align*}
+\textbf{Independence}\\
+Two events A and B are indepepdent if $$P(A|B)=P(A)$$ and dependent otherwise.\\\\
+This is to say that the probability of A does not depend on whether or not event B occurs.\\
+Two events A and B are also indepepdent if \[
+  P(A \cap B)= P(A)P(B)
+\]
+This is because we know the following logic:\\
+\begin{align*}
+  P(A|B)=P(A)\\
+  P(A \cap B)= P(A|B)P(B)=P(A)P(B)
+\end{align*}
+
+\textbf{Theorem}\\
+Let A and B be two indepepdent events. Then $A^C, B^C$ are also indepepdent. \\
+$$P(A \cap B)=P(A)P(B)$$
+We have to then show the following to proof the indepepdence of the complements:\\
+$$P(A^C \cap B^C)=P(A^C)P(B^C)$$
+\begin{align*}
+  P(A^C \cap B^C)=P((A \cup B)^C)\\
+  P(A^C \cap B^C)=1-P(A \cup B)\\
+  P(A^C \cap B^C)=1-[P(A)+P(B)-P(A \cap B)]\\
+  P(A^C \cap B^C)=1-[P(A)+P(B)-P(A)P(B)]\\
+  P(A^C \cap B^C)=1-P(A)-P(B)+P(A)P(B)]\\
+  P(A^C \cap B^C)=[1-P(A)]-P(B)+P(A)P(B)]\\
+  P(A^C \cap B^C)=P(A^C)-[P(B)(1-P(A)]]\\
+  P(A^C \cap B^C)=P(A^C)-[P(B)(P(A^C)]]\\
+  P(A^C \cap B^C)=P(A^C)[1-P(B)]\\
+  P(A^C \cap B^C)=P(A^C)P(B^C)\\
+\end{align*}
+Indepdent Events:
+\[
+  P(A \cap B)=P(A)+P(B)
+\]
+Mutually exclusive events:
+\[
+  P(A \cap B)= \emptyset
+\]
+The major take away is that when two events are independent the intersection is the product of the two events
+\textbf{Independence of more than two events}\\
+Given $A_1,...,A_n$ independent events are said to be independent if for every set of indicies $i_1,...,i_k$
+\[
+P(A_{i_1} \cap,...,\cap A_{i_k})=P(A_{i_1})P(A_{i_2})...P(A_{i_k})
+\]
+
+\end{document}
