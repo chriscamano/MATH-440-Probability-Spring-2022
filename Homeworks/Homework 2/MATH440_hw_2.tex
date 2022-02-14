@@ -1,0 +1,89 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{mathtools,amssymb}
+\usepackage{tikz}
+\usepackage{xcolor}
+\pgfplotsset{compat = newest}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH440 Homework 2 }
+\date{2/13/2022}
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+\newcommand{\q}{\quadd}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\rtwo}{$\mathbb{R}^2$}
+\newcommand{\C}{$\mathbb{C}$}
+
+\begin{document}
+\maketitle
+\textbf{Chapter 2.4 Problems: 10,20,22,30,40,46}\\
+\textbf{2.4.20:}\\
+\begin{proof}
+  Andy, Bob and Charley have all been serving time for grand theft auto. The warden plans to release two of them next week at random. However Andy is friends with one of the guards who offers to tell Andy the name of one of the prisoners being released other than himself at random. Andy declines as he believes that if he had that information then his chances would decrease to 12 instead of 23. Is Andy's concern justified?
+  \\
+  There are three possible events that could transpire, either \[
+    AB,AC,BC
+  \]
+  Let event A represent the event of the first prisoner being released, event B being the second, and C being the third prisoner. Therefore at face value the probability of two prisoners being selected in any given combination is
+  \[
+    P(AB)=P(BC)=P(AC)=\frac{1}{3}
+  \]
+
+  Each representing a combination of two prisoners therefore:
+  \[
+    S=\{AB,AC,BC\}
+  \]
+  Where S is the sample space. \\
+  There are two possibilities for what the jailer says. He can either say that prisoner B will be released or he says that prisoner C will be released. This brings into question then two conditional probability questions. \\
+
+  \newcommand{\prob}{probability}
+  Either:
+  \[
+    P(AB|B)
+  \]
+  or
+  \[
+    P(AC|C)
+  \]
+  In both events though
+  \begin{align*}
+      P(AB|B)=\frac{P(B|AB)P(AB)}{P(B|AB)P(AB)+P(B|BC)P(BC)}=
+      \frac{P(B|AB)\frac{1}{3}}{P(B|AB)\frac{1}{3}+P(B|BC)\frac{1}{3}}=\\
+  \end{align*}
+  \[
+    \frac{P(B|AB)}{P(B|AB)+P(B|BC)}=\frac{1}{1+\frac{1}{2}}=\frac{2}{3}
+  \]
+
+  \begin{align*}
+    P(AC|C)=\frac{P(C|AC)P(AC)}{P(C|AC)P(AC)+P(C|BC)P(BC)}=\frac{P(C|AC)\frac{1}{3}}{P(C|AC)\frac{1}{3}+P(C|BC)\frac{1}{3}}=\\
+  \end{align*}
+  \[
+      \frac{P(C|AB)}{P(C|AC)+P(C|BC)}=\frac{1}{1+\frac{1}{2}}=\frac{2}{3}
+  \]
+
+  So no it does not matter if he asks his probability will not change.
+\end{proof}
+
+\textbf{2.4.20:}\\
+\textbf{2.4.22:}\\
+\textbf{2.4.30:}\\
+\textbf{2.4.40:}\\
+\textbf{2.4.46:}\\
+
+\end{document}
