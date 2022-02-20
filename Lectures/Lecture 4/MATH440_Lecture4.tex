@@ -1,0 +1,87 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{mathtools,amssymb}
+\usepackage{tikz}
+\usepackage{xcolor}
+\pgfplotsset{compat = newest}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 440 Lecture 4 }
+\date{2/17/2022}
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+\newcommand{\q}{\quad}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\rtwo}{$\mathbb{R}^2$}
+\newcommand{\C}{$\mathbb{C}$}
+
+\begin{document}
+\maketitle
+\section*{Combinatorics}
+
+\textbf{Multiplication rule and summation rule}\\
+\textbf{multiplication rule}
+Assume you have some operation or some object that can be chosen in n ways:
+
+\[
+  A_1,A_2,...,A_k
+\]
+Each with
+\[
+  n_1,n_2,...,n_k
+\]
+different ways of being selected. .
+
+\textbf{Rule of Sum}
+When you have different events A and B with n ways for A and m ways for B you can find the combinations by summing the different ways.
+
+\[
+  \textbf{or }\rightarrow \textbf{rule of sum}
+\]
+\[
+  \textbf{and }\rightarrow \textbf{Multiplication rule}
+\]
+\section*{permutations}
+Given an ordered arrangement of some objects of length k which are selected from a finite collection of objects (size n) is called a permutation:
+\[
+  nP_k=\frac{n!}{(n-k)!}
+\]
+\\
+\section*{counting permutations with repetitions}\\
+The number of ways to arrange n objects such that $n_1$ being of one kind $n_2$ being of second time.... such that $n_1+...+n_r=1$ is
+\[
+  N=\frac{n!}{\prod_{i=1}^r n_i!}
+\]
+\section*{Combinations}
+\[
+  nC_r=n \choose k=\frac{n!}{(n-k)!k!}
+\]\\
+\section*{Binomial Coefficients}
+\textbf{Property of Pascal's triangle}
+\[
+  {n \choose k} = {n \choose {k-1}} + {n \choose {k+1}}
+
+  \]
+  \textbf{Multinomial Coefficients}
+  \\
+  Given
+  \[
+    (x_1+x_2+..+x_r)^n=\sum_{n_1}+\sum_{n_2}+...+\sum_{n_r}\frac{n!}{\prod_{i=1}^rn_i!}\prod_{j=1}^i x_j^{n_j}
+  \]
+  \end{document}

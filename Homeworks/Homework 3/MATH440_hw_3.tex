@@ -1,0 +1,145 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{mathtools,amssymb}
+\usepackage{tikz}
+\usepackage{xcolor}
+\pgfplotsset{compat = newest}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 440 Homework 3 }
+\date{2/19/2022}
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+\newcommand{\q}{\quad}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\rtwo}{$\mathbb{R}^2$}
+\newcommand{\C}{$\mathbb{C}$}
+
+\begin{document}
+\maketitle
+\section*{Chapter 2.6 homework: Problems 6, 8
+14, 20, 24}
+\section*{Problem 2.6.6}
+\begin{proof}
+  A fast food restaurant offers customers a choice of eight toppings that can be added to a hamburger. How many different hamburgers can be ordered. \\
+  For this problem we have the ability to either choose a topping or to not choose a topping, therefore this problem can be solved by taking a sum of each amount of chosen toppings. This sum can be expressed as
+  \[
+    \sum_{i=0}^8 {8 \choose i }=256
+  \]
+  Where i is the number of toppings chosen at a given contemplation of adding more toppings.
+\end{proof}\\\\
+\section*{Problem 2.6.8}
+\begin{proof}
+  Recall the postal zip codes described. These are codes in the range 00000 to 99999
+  \begin{itemize}
+    \item if viewed as nine digit numbers how many zip codes are greater than 700,000,000\\\\
+    If each digit is indepdently selected then the first digit can only be 7 8 or 9. this means that we have 3 possible ways. for the other eight digits they can be any of the ten numbers between 0 and 9 so the number of numbers from 700,000,000 to 999,999,999 is :
+    \[
+      3(10^8)
+    \]
+    the problem states that we need numbers greater than 700,000,000 and out system allows for this number so we must remove it from the final answer giving:
+    \[
+            3(10^8)-1=299,999,999 \textbf{ numbers }
+    \]
+    \item How many zip codes will the digits in the nin positions alternate vetween even and odd. \\\\
+    Given that from 0-9 we have five odd digits and 4 even digits we can build a 9 digit number in such a way that it alternates in two following cases. We could first start with even or we could first start with an odd number. Either way to alternate we will still have to use the same quantity of 4 evens and 5 odds to reach nine digits. since each digit selection is an indepdent event we can use the multiplication rule to calculate a sum:
+    \[
+      5^4(5^5)=5^5(5^4)=5^9=1,953,125
+    \]
+    This result makes sense becauase becuase we have 9 positions and each set has a cardinality of 5. Since we can start at odd or even and still get alternating 9 digit numbers we account for this by taking $5^9$ twice
+    \[
+      2(5^9)=3,906,250
+    \]
+    \item How many zip codes will have the first five digits be all different odd numbers and the last four digits be two 2s and two 4s?\\\\
+    Our numbers are of the form below:
+     \[
+       x_1,x_2,x_3,x_4,x_5,y_1,y_2,y_3,y_4 \quad x_i\in {1,3,5,7,9}\quad y_i \in {2,4}
+     \]
+     So with this being the case we have a limited set of numbers to pick from. For the odd numbers there will be five ways to pick the first digit, which will then shrink the size of the set since the digits must be unique. This leads to a definition of $5!$
+     \[
+       5!(y_1,y_2,y_3,y_4\quad y_i \in {2,4})
+     \]
+     The number of combinations needed to describe the different ways to arrange 2 numbers four times is
+     \[
+        4\choose 2
+     \]
+     So we have
+     \[
+       5! {4\choose 2} =\frac{5!4!}{2!2!}=\frac{5!4!}{4}= 720
+     \]
+  \end{itemize}
+\end{proof}\\\\
+\section*{Problem 2.6.14}
+\begin{proof}
+  Given the letters in the work \textbf{ Z O M B I E S } in how many ways can two of the letters be arranged such that one is a vowel and ne is a consonant. \\\\
+  The set of consonants is:
+  \[
+    C=\{Z,M,B,S\}
+  \]
+  And vowels
+  \[
+    V=\{O,I,E\}
+  \]
+  Thus the number of ways to make a 2 letter string with one consonant and one vowel is :
+  \[
+    {4 \choose 1}{3 \choose 1}=12
+  \]
+  Like the problem listed earlier order matters and we need to represent the situation where a vowel is listed first then a consonant
+  \[
+    {3 \choose 1}{4 \choose 1}=12
+  \]
+  together this means there are \textbf{24 ways}
+\end{proof}\\\\
+\section*{Problem 2.6.20}
+\begin{proof}
+  The nine memebers of the music faculty baseball team the Mahler Maulers, are all incompetent,and each can play any postiion equally poorly. In how many different ways can the Mahler Maulers take the field.
+  \\
+  Since there are 9 players and each position reduces the size of the set of remainig players this is an indicator that we would express this as a factorial. 9 players means :
+  \[
+    9!= 362,880
+  \]
+\end{proof}\\\\
+\section*{Problem 2.6.24}
+\begin{proof}
+  How many ways can a twelve member cheerleading squad (six men six women) pair up to a form six male female teams?
+  \\
+  How many ways can six male female teams be positioned along a sideline.
+  \\
+  What might the number $6!6!2^6$ represent \\
+  What might the number $6!6!2^62^{12}$ represent?\\\\
+  \begin{itemize}
+    \item   How many ways can a twelve member cheerleading squad (six men six women) pair up to a form six male female teams? \\\\
+    When building the teams for each man a corresponding selection of a women correlates a reduction the set of remaining women this means that the decrementing relationship yeilds a factorial description.
+    \[
+      6!=720
+    \]
+    So there are 720 ways to make 12 two person co-ed teams.
+    \item   How many ways can six male female teams be positioned along a sideline.\\\\
+    Since there are 6! ways to organize male female teams each one can be considered as a unique object from a mathematical perspective. With this narrative we now have six objects that we wish to arrange in the set of possible permutations. $6P_6=6!$ so there are 6!6! ways to arrange the six teams.
+    \[
+      6!6!=518,400
+    \]
+    \item   What might the number $6!6!2^6$ represent \\\\
+    This problem is trickier than the others because it has to do with the arrangement of the organized teams. If each member of a given team can be placed in one of two positions then there are $2^6$ possible ways to do this as we have six of these teams. So the total $6!6!2^6$ Represents the numbers of ways to arrange six teams each arranged in a possible way on the sideline , then each positioned in one of two ways. Maybe columns of team groups.
+    \\\\
+    \item   What might the number $6!6!2^62^{12}$ represent?\\\\
+    This question is very similar to the previous. This quantity represents the number of ways to create six male female teams, position them all on the sideline then organize the cheerleaders amongst 12 different positions. Because we still have $2^6$ this means that the members can also be in one of two states in a different way. This means that we are describing a matrix of two rows ( $2^6$) and six columns $2^{12}$.
+  \end{itemize}
+\end{proof}\\\\
+\end{document}

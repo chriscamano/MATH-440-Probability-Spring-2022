@@ -33,6 +33,21 @@
 \begin{document}
 \maketitle
 \textbf{Chapter 2.4 Problems: 10,20,22,30,40,46}\\
+\textbf{2.4.10:}\\
+\begin{proof}
+  Suppose events A and V are such that $P(A \cap B)=.1$ and $P((A \cup B)^C)=.3$, P(A)=.2.\\
+  What is $P[(A \cap B)|(A\cup B)^C]$?
+  \[
+    P[(A \cap B)|(A\cup B)^C]=\frac{P((A \cap B)\cap(A\cup B)^C)}{P((A\cup B)^C)}
+  \]
+  \[
+    P[(A \cap B)|(A\cup B)^C]=\frac{P((A \cap B)\cap(A^C\cap B^C )}{P((A\cup B)^C)}
+  \]
+  \[
+      P[(A \cap B)|(A\cup B)^C]=\frac{0}{P((A\cup B)^C)}=0
+  \]
+  As the intersection of the events does not intersect the complement of the union
+\end{proof}\\
 \textbf{2.4.20:}\\
 \begin{proof}
   Andy, Bob and Charley have all been serving time for grand theft auto. The warden plans to release two of them next week at random. However Andy is friends with one of the guards who offers to tell Andy the name of one of the prisoners being released other than himself at random. Andy declines as he believes that if he had that information then his chances would decrease to 12 instead of 23. Is Andy's concern justified?
@@ -74,16 +89,94 @@
     P(AC|C)=\frac{P(C|AC)P(AC)}{P(C|AC)P(AC)+P(C|BC)P(BC)}=\frac{P(C|AC)\frac{1}{3}}{P(C|AC)\frac{1}{3}+P(C|BC)\frac{1}{3}}=\\
   \end{align*}
   \[
-      \frac{P(C|AB)}{P(C|AC)+P(C|BC)}=\frac{1}{1+\frac{1}{2}}=\frac{2}{3}
+      \frac{P(C|AC)}{P(C|AC)+P(C|BC)}=\frac{1}{1+\frac{1}{2}}=\frac{2}{3}
   \]
 
   So no it does not matter if he asks his probability will not change.
 \end{proof}
-
-\textbf{2.4.20:}\\
+\\
 \textbf{2.4.22:}\\
+\begin{proof}
+  A man has n keys on a key ring, one of which opens the door to his apartment. Having celebrated a bit too much one evening, he returns home only to find himself unable to distinguish one key from another. Resourceful, he works out a fiendishly clever plan: He will choose a key at random and try it. If it fails to open the door, he will discard it and choose at random one of the remaining n-1 keys, and so on. Clearly, the probability that he gains entrance with the first key he selects is 1/n. Show that the probability the door opens with the third key he tries is also 1/n. (Hint: what has to happen before he even gets to the third key?)\\\
+  For starters the probability of the first key is $\frac{1}{n}$ Where n is the number of keys. However if he fails then this effects the following event. The proability of failing on the first key is \[
+    P(A_1)^C=\frac{n-1}{n}
+  \]
+  The probability of opening the door with the second key given the first fails is as follows:
+  \[
+    P(A_2\cap A_1^C)=P(A_2|A_1^C)P(A_1^C)=\frac{1}{n-1}\frac{n-1}{n}=\frac{1}{n}
+  \]
+  The probability of opening the door with the third key given the first two have failed is:
+  \[
+    P(A_3\cap A_2^C\cap A_1^C)=P(A_3|A_2^C \cap A_1^C)P(A_2|A_1^C)P(A_1^C)=\frac{1}{n-2}\frac{n-2}{n-1}\frac{n-1}{n}=\frac{1}{n}
+  \]
+\end{proof}
+\\
 \textbf{2.4.30:}\\
+Urn 1 contains three red chips and one white chip. Urn II contains two red chips and two white chips. One chip is drawn from each urn and transferred to the other urn. Then a chip is drawn from the first urn. What is the probability that the chip ultimately drawn from urn 1 is red?
+Two chips are drawn at the start leading to four possible outcomes.
+$$
+\begin{bmatrix}
+  R & W\\
+  R & R\\
+  W & R\\
+  W& W
+\end{bmatrix}
+$$
+\begin{align*}
+  P(RW)=.75(.5)=.375\\
+  P(RR)=.75(.5)=.375\\
+  P(WR)=.25(.5)=.125\\
+  P(WW)=.25(.5)=.125\\
+\end{align*}
+\begin{align*}
+  P(R|RW)=.5\\
+  P(R|RR)=.75\\
+  P(R|WR)=1\\
+  P(R|WW)=.75\\
+\end{align*}
+Note that an identical draw does not effect original probability:
+$$P(R)=P(R|RW)P(RW)+P(R|RR)P(RR)+P(R|WR)P(WR)+P(R|WW)P(WW)=.6875$$
 \textbf{2.4.40:}\\
-\textbf{2.4.46:}\\
+Urn 1 contains two white chips and one red chip. urn II has one white chip and two red chips, One chip is drawn at random from urn 1 and transferred to urn II. Then one chip is drawn from urn II. What is the P that the chip transfered was white?
 
+\begin{align*}
+  P(R_1)=\frac{1}{3}\\
+  P(W_1)=\frac{2}{3}\\
+  P(R_2|R_1)=.75\\
+  P(R_2|W_1)=.5\\
+\end{align*}
+What is the P that the chip transfered was white? could be found by either finding the conditional probability for $P(W_1|W_2)$ or $P(W_1|R_2)$
+
+\[
+  P(W_1|R_2)=\frac{P(R_2|W_1)P(W_1)}{P(R_2)}
+\]
+\[
+  P(W_1|R_2)=\frac{P(R_2|W_1)P(W_1)}{P(R_2|R_1)P(R_1)+P(R_2|W_1)P(W_1)}=\frac{.75(\frac{2}{3})}{.75(\frac{1}{3})+.5(\frac{2}{3})}=.571429
+\]
+\textbf{2.4.46:}\\
+Brett and margo have each though about murdering their rich uncle basil in hopes of claiming their inheritance a bit early. Hoping to take advantage of Basil's predeliction for immoderate desserts, Brett has put rat poisoning into the cherries flambe; Margo, unaware of Brett's activities, has laced the chocolate mousse with cyanide. Given the amounts likely to be eaten, the proability of the rat poisoning being fatal is .6; The cyanide, .9. Based on other dinners where Basil was presented with the same dessert options, we can assume he has a 50\% chance of asking for the cherries flambe, a 40\% chance of ordering the chocolate mousse, and a 10\% chance of skipping dessert altogether. No sooner are the dishes cleared away than Basil drops dead. In the absence of any other evidence, who should be considered the prime suspect?\\
+Let event D be death, event R be rat poison and C be cyanide.
+\begin{align*}
+  P(D|R)=.6\\
+  P(D|C)=.9\\
+  P(C)=.4\\
+  P(R)=.5\\
+\end{align*}
+  \[
+    P(C|D)=\frac{P(D|C)P(C)}{P(D|C)P(C)+P(D|R)P(R)}
+  \]
+  \[
+    P(C|D)=\frac{.9(.4)}{.9(.4)+.6(.5)}=.5454
+  \]
+  \[
+    P(R|D)=\frac{P(D|R)P(R)}{P(D|C)P(C)+P(D|R)P(R)}
+  \]
+  \[
+  P(R|D)=\frac{.6(.5)}{.9(.4)+.6(.5)}=.4545
+  \]
+
+  \[
+    P(C|D)>P(R|D) \quad \therfore \textbf{Margo is the prime suspect}
+  \]
+  For this problem I left out the ten percent from the total probability calculation becuase he can not die from eating nothing meaning it would just be zero.
 \end{document}
