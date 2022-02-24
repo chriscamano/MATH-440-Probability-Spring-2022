@@ -1,0 +1,80 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{mathtools,amssymb}
+\usepackage{tikz}
+\usepackage{xcolor}
+\pgfplotsset{compat = newest}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 440 lecture 5 }
+\date{2/17/2022}
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+\newcommand{\q}{\quad}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\rtwo}{$\mathbb{R}^2$}
+\newcommand{\C}{$\mathbb{C}$}
+\newcommand{\sect}[1]{\section*{#1}}
+\newcommand{\n}{\\\\}
+\begin{document}
+\sect{Introduction to chapter three: 3.2 and 3.3}
+\sect{3.3 Random Variables}
+\textbf{Discrete Random Variables }\\
+Random variables are used to inject concepts of calculus into the study of probability. The Discrete case is the simple case for random variables. Our sample space in these contexts can be finite, countable infinite, or continuous.\n
+\textbf{Random variable}\\
+\newcommand{\rv}{random variable }
+A \rv is a function from a sample space into $\R$
+\[
+  X : \mathcal{S} \mapsto \R
+\]
+\textbf{ discrete \rv}\\
+A discrete \rv is a function whose domain is a sample space $\mathcal{S}$ and whose values are from a finite or countable set of real numbers is called a discrete \rv.\n
+We need to define  a probability function for a new sample space.
+
+
+Where X is a random variable and x is an observed value.\n
+Given a sample space $\mathcal{S}=\{s_1,s_2,...s_,\}$ we map each s to some value x $x \in \R$.
+\newcommand{\S}{\mathcal{S}}
+\[
+  P(x)=P(X=x)=P(\{s:X(s)=x\})
+\] The function listed above is caleld a discrete probability function.
+\newcommand{\pdf}{probability denisty function }
+recall the rules of probability:
+\begin{align*}
+\forall A, P(A) \geq 0\\
+P(\S)=1\\
+A \cap B=\emptyset: P(A \cup B)= P(A)+P(B)
+\end{align*}
+if: \[
+    A_1,A_2,...A_n, A_i \cap A_j=\emptyset \forall i,j
+\]\[
+  P(\bigcup_{i=1}^\infty A_i)=\sum_{i=1}^\infty P(A_i)
+\]
+
+\textbf{The \pdf of a discrete \rv}:\\
+The \pdf of a discrete \rv is given by :
+\[
+  P(x)=P(X=x)=P(\{s:X(s)=x\})
+\]
+A function P(x) is a \pdf of a \rv x $\iff$
+\begin{align*}
+  p(x) \geq 0\\
+  \sum_{\forall x}P(x)=1
+\end{align*}
+\end{document}
