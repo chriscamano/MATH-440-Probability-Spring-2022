@@ -1,0 +1,175 @@
+\documentclass[12pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\pagestyle{empty}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 440  Homework 3 }
+\date{2/26/2022}
+
+\topmargin -0.6in
+\headsep 0.40in
+\oddsidemargin 0.0in
+\textheight 9.0in
+\textwidth 6.5in
+
+\newcommand{\econst}{\mathrm{e}}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\dwrt}[1]{\frac{\diff}{\diff #1}}
+%%%%%%Macros for 425%%%%%%%%%
+\newcommand{\q}{\quad}
+\newcommand{\tab}{\\\\}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\sect}[1]{\section*{#1}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\rtwo}{\mathbb{R}^2}
+\newcommand{\mxn}{{mxn}}
+
+\newcommand{\Axb}{\textbf{Ax=b} }
+\newcommand{\Axz}{\textbf{Ax=0} }
+\newcommand{\dim}{\text{dim}}
+\newcommand{\lc}{linear combination }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\everymath={\displaystyle}
+
+
+\begin{document}
+\maketitle
+
+\sect{Problem 2.5.6}
+\begin{proof}
+  Three points  $X_1,X_2,X_3$ are chosen at random in the interval (0,a). A second set of three points $Y_1,Y_2,Y_3$ are chosen at random in the interval (0,b). Let A be the even that $X_2$ is between $X_1$ and $X_3$. Let B be the event that $Y_1<Y_2<Y_3$. Find $P(A\cap B)$\\
+  \[
+    A=X_1<X_2<X_3 \text{ or } X_3<X_2<X_1
+  \]
+  \[
+    B=Y_1<Y_2<Y_3
+  \]
+  \[
+    P(A)= \frac{1}{3}, P(B)=\frac{1}{6}
+  \]
+  As there are six ways to arrange three points. There are two ways to place the second point between the first and the third:
+  \[
+    P(A \cap B) = \Big(\frac{1}{3}\Big)\frac{1}{6}=\frac{1}{18}
+  \]
+  As the events A and B are independent of one another.
+\end{proof}\tab
+
+\sect{Problem 2.5.8}
+\begin{proof}
+  Suppose that events A,B,C are independent.
+  \begin{itemize}
+    \item Use a Venn diagram to find an expression for P(A \cup B\cup C) that does not use a complement \tab
+    \[
+       P(A\cup B\cup C)=P(A)+P(B)+P(C)=P(A)+P(B)+P(C)-P(A\cap B)-P(A\cap C)-P(B\cap C) +P(A\cap B\cap C)
+    \]
+    This definition was found using a ven  diagram and a combination of the theorem in chapter 2.3.7 regarding union of n sets over a sample space.
+    Since the events are all independent we can also express this statement as:
+    \begin{align*}
+       P(A\cup B\cup C)=P(A)+P(B)+P(C)=P(A)+P(B)+P(C)-\\P(A)P(B)-P(A)P(C)-P(B)P(C) + P(A)P(B)P(C)
+    \end{align*}
+    \item Find an expression for $P(A \cup B \cup C)$ that does use a complement.\tab
+    \begin{align*}
+     P(A \cup B \cup C)=(P(A \cup B \cup C)^c)^c
+    \end{align*}
+    De Morgan's
+    \[
+      P(A \cup B \cup C)= 1- P(A^c\cap B^c\cap  C^c)
+    \]
+    \[
+      P(A \cup B \cup C)= 1- P(A^c\cdot B^c \cdot C^c)
+    \]
+    Since the events are independent we know that the intersection can be represented as a product. This the complement of the union of the three sets can be described as 1 - the product of the complements.
+  \end{itemize}
+\end{proof}\tab
+
+\sect{Problem 2.5.14}
+\begin{proof}
+  In a roll of a pair of fair dice ( one red and one green) Let A be the event the red die shows a 3,4,5. B be the green die shows 1,2. C be the sum is equal to seven. Show that all three events are independent: \\
+  \[
+    P(A)=\frac{1}{2}
+  \]
+  \[
+    P(B)=\frac{1}{3}
+  \]
+  \[
+    P(C)=\{(3,4),(4,3),(5,2),(2,5),(6,1),(1,6)]}=\frac{1}{6}
+  \]
+  \[
+    P(A\cap B\cap C)=\{(5,2)\}=\frac{1}{36}=\frac{1}{2}\cdot\frac{1}{6}\cdot \frac{1}{3}
+  \]
+  There the events are independent
+\end{proof}\tab
+
+\sect{Problem 2.5.15}(BONUS)
+\begin{proof}
+  In a roll of a pair of fair dice ( one red and one green), let A be the event of an odd number on the red die, B the event of an odd number on the green,  and let C be the event that the sum is odd show that any pair of these events is independent but that A B and C are not mutually independent. \\
+  \[
+    P(A)=\frac{1}{2}
+  \]
+  \[
+    P(B)=\frac{1}{2}
+  \]
+  \[
+    P(C)=\frac{1}{2}
+  \]
+  \begin{itemize}
+    \item Prove that any pair of these events is independent:\\
+    \[
+      P(A \cap C) = \{(1,2),(1,4),(1,6),(3,2),(3,4),(3,6),(5,2),(5,4),(5,6)\}=\frac{9}{36}=\frac{1}{4}
+    \]
+    \[
+      P(A)P(C)=\frac{1}{4}
+    \]
+    Therefore since $P(A \cap C)$ =P(A)P(C) the two events are independent. The same holds for $(P(B\cap C)$ by swapping the ordered pairs in the set above. Finally the last pair $A \cap B$:
+    \[
+      P(A\cap B)=\{(1,1),(1,3),(1,5),(3,1),(3,3),(3,5),(5,1),(5,3),(5,5)\}=\frac{9}{36}=\frac{1}{4}
+    \]
+    Therfore these two events are independent as well
+    \item Show that the three are not mutually independent. Two odd numbers cannot form an even number as $ \forall k,m \in \Z (2m+1)+(2k+1)=2(m+k+1)$ meaning the sum will always be even. therefore the intersection of the three veents is the empty set. If the three were independent we would expect the proabability of the event to be the product of three individua events, however this is not the case therefore the three are not mutually independent.
+  \end{itemize}
+\end{proof}\tab
+
+\sect{Problem 2.5.20}
+\begin{proof}
+  Players A B and C toss a fair coin in order, The first to throw a head wins . What are the respective chances of winning?\\
+  This problem is a problem that studies the pattern each player wins. Since player 1 is the first to throw they could win on either the first throw or subsequent turns spaced by three following the sequence $\{1,4,7,..\}$ likewise B and C each have their own sequence:
+  \[
+    A=$\{1,4,7,..\}$ \quad B=$\{2,5,8,..\}$ \quad $\{6,9,12,..\}$
+  \]
+  \\Each of these sequences can be summed using an infinte series which represents the game "never ending" all representations that are not infinite approximate the proabability of each player's victory:
+  \begin{align*}
+    P(A)=\sum_{n=0}^\infty \Big(\frac{1}{2}\Big)^{3n}\frac{1}{2}\\
+    P(A)=\frac{1}{2}\sum_{n=0}^\infty \Big(\frac{1}{2}\Big)^{3n}\\
+    P(A)=\frac{1}{2}\sum_{n=0}^\infty \Big(\frac{1}{8}\Big)^{n}\\
+    P(A)=\frac{1}{2} \cdot \frac{1}{\frac{7}{8}}=\frac{4}{7}
+  \end{align*}
+
+  Since each following player has an additional base added in the exponent we can deduce that through series manipulation we will factor the extra half meaning for each additional player their probability of winning the game can be found by multiplying by $\frac{1}{2}^k$ where k is the player's number. Therfore :
+  \[
+    P(B)=\frac{1}{2}\cdot \frac{4}{7}=\frac{2}{7}
+  \]
+  \[
+      P(C)=\frac{1}{2}^2\cdot \frac{4}{7}=\frac{1}{7}
+  \]
+\end{proof}\tab
+
+\sect{Problem 2.5.24}
+\begin{proof}
+  Each of m urns contains three red chips and four white chips a total of r samples with replacement are taken from each urn. What is the probability that at least one red chip is drawn from at least one urn. \tab
+  \[
+    P(white)=\frac{4}{7}
+  \]
+  Each urn is sampled r times and there are m urns total. Since the events are independent the event of pulling no red chips at all is described by;
+  \[
+    \prod_{m=1}^m\prod_{r=1}^r\frac{4}{7}
+  \]
+  The probability of at least one red chip is the complement of this value or:
+  \[
+    1-\prod_{m=1}^m\prod_{r=1}^r\frac{4}{7}=.965185
+  \]
+\end{proof}\tab
+\end{document}

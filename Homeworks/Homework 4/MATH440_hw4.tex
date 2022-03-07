@@ -1,0 +1,217 @@
+\documentclass[12pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\pagestyle{empty}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 440  Homework 3 }
+\date{2/26/2022}
+
+\topmargin -0.6in
+\headsep 0.40in
+\oddsidemargin 0.0in
+\textheight 9.0in
+\textwidth 6.5in
+
+\newcommand{\econst}{\mathrm{e}}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\dwrt}[1]{\frac{\diff}{\diff #1}}
+%%%%%%Macros for 425%%%%%%%%%%%%%%%%%%%
+\newcommand{\q}{\quad}
+\newcommand{\tab}{\\\\}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\sect}[1]{\section*{#1}}
+
+%%%%%%Vector Spaces%%%%%%%%%%%%%%%%%%%
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\rtwo}{\mathbb{R}^2}
+\newcommand{\mxn}{{mxn}}
+
+%%%%%%Sets and common phrases%%%%%%%%%
+\newcommand{\Axb}{\textbf{Ax=b} }
+\newcommand{\Axz}{\textbf{Ax=0} }
+\newcommand{\dim}{\text{dim}}
+\newcommand{\lc}{linear combination }
+\newcommand{\let}{\text{Let }}
+\newcommand{\tf}{\therefore}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\everymath={\displaystyle}
+
+
+\begin{document}
+\maketitle
+
+\sect{Problem 1}
+\begin{proof}
+  Suppose Pete and Andre are playing a tennis match in which the first player to win three sets wins the match . Considering the possible orderings for the winning player in how many ways can this tennis match end. \\
+  In order to win a set of tennis you must win three games total. This means at most a game consists of five games. This problem framed through combinatorics is the following statement:
+  \[
+     5 \choose 3
+  \]
+  $ 5 \choose 3$ is ten and since there are two players this means that there 20 possible ways for the game to end.
+\end{proof}\\
+
+\sect{Problem 2}
+\begin{proof}
+  Prove :
+  \[
+     {n \choose k} = {{n-1} \choose k}+ {{n-1} \choose {k-1}}
+  \]
+  \
+  \textbf{Direct proof:}\\
+  \begin{align*}
+     &\frac{n!}{k!(n-k)!} = \frac{(n-1)!}{k!(n-k-1)!}+ \frac{(n-1)!}{(k-1)!(n-k)!}\\\\
+     &\frac{n!}{k!(n-k)!}=\frac{(k-1)!(n-k)!(n-1)!+k!(n-k-1)!(n-1)!}{k!(n-k-1)!(k-1)!(n-k)!}\\\\
+     &n!=\frac{(k-1)!(n-k)!(n-1)!+k!(n-k-1)!(n-1)!}{(n-k-1)!(k-1)!}\\\\
+     &n!=\frac{(n-k)!(n-1)!+k(n-k-1)!(n-1)!}{(n-k-1)!}\\\\
+     &n!=(n-k)(n-1)!+k(n-1)!\\\\
+     &n=(n-k)+k\\\\
+     &n=n\\\\
+     & \therefore {n \choose k} = {{n-1} \choose k}+ {{n-1} \choose {k-1}}
+  \end{align*}
+\end{proof}\\
+
+\sect{Problem 3}
+\begin{proof}
+  Prove that:
+  \[
+    \sum_{k=0}^n(-1)^k{n \choose k}=0
+  \]
+  Note that:
+  \[
+    (a+b)^n=\sum_{k=0}^n{n \choose k}(a)^k(b)^{n-k}
+  \]
+  \textbf{Direct Proof: }
+  \begin{align*}
+    & \text{Let } a=-1 \therefore \\
+    &(-1+b)^n=\sum_{k=0}^n{n \choose k}(-1)^k(b)^{n-k}\\
+    &\text{Let } b=1 \therefore \\
+    &(-1+1)^n=\sum_{k=0}^n{n \choose k}(-1)^k(1)^{n-k}\\
+    &(0)^n=\sum_{k=0}^n{n \choose k}(-1)^k\\
+    &0=\sum_{k=0}^n{n \choose k}(-1)^k\\
+  \end{align*}
+  \begin{align*}
+
+  \end{align*}
+\end{proof}\\
+
+\sect{Problem 4}
+\begin{proof}
+  Prove:
+  \[
+    \sum_{k=0}^n{n \choose k}=2^n
+  \]
+  \begin{align*}
+    &\text{Let } a, b =1 \tf\\
+    &(1+1)^n=\sum_{k=0}^n{n\choose k}(1)^k(1)^{n-k}\\
+    &2^n=\sum_{k=0}^n{n\choose k}
+  \end{align*}
+\end{proof}\\
+
+\sect{Problem 5}
+\begin{proof}
+  Prove:
+  \[
+    \sum_{j=0}^k {d \choose j }{e \choose k-j}={d +e \choose k}
+  \]
+  \textbf{Algebraic Proof:}\\
+  Given the terms $(1+t)^d$ and $(1+t)^e$ we can start this proof by first representing these terms using the binomial theorem.
+  \begin{align*}
+    &(1+t)^d(1+t)^e)=(1+t)^{e+d}\\
+    &\sum_{k=0}^d {d \choose k}x^k\sum_{j=0}^e {e \choose j}x^j\\
+    &\sum_{k=0}^d\sum_{j=0}^e{d \choose k}{e \choose j}x^{k+j}\\
+    & \text{Let }r=k+j \tf j=r-k\\
+    &\sum_{k=0}^d\sum_{r=k}^{k+e}{d \choose k}{e \choose r-k}x^{r}\\
+    &\text{ as r=k when p =0, and when p is e r=k+e}\\
+    &\sum_{k=0}^d\sum_{r=k}^{d+e}{d \choose k}{e \choose r-k}x^{r}-\sum_{k=0}^d\sum_{r=k+e+1}^{d+e}{d \choose k}{e \choose r-k}x^{r}\\
+    &=\sum_{k=0}^d\sum_{r=k}^{d+e}{d \choose k}{e \choose r-k}x^{r}
+  \end{align*}
+    Since at this point $ r-k > e$ the combinatorial term ${e \choose r-k}$  will reduce to $\frac{e!}{\infty}=0$ $\tf$
+    \begin{align*}
+      &=\sum_{k=0}^d\sum_{r=k}^{d+e}{d \choose k}{e \choose r-k}x^{r}=\\
+      &\sum_{k=0}^d\sum_{r=0}^{d+e}{d \choose k}{e \choose r-k}x^{r}-\sum_{k=0}^d\sum_{r=0}^{k-1}{d \choose k}{e \choose r-k}x^{r}
+    \end{align*}
+    Since the summation ranges from r=0 to k-1 this implies that for all steps of the sum r is less than k meaning we will have a negative binomial coefficient making the sum evaluate to zero since again we divide by $\frac{e!}{\infty}$
+    \begin{align*}
+      \sum_{k=0}^d\sum_{r=0}^{d+e}{d \choose k}{e \choose r-k}x^{r}
+    \end{align*}
+    The inner summation is now proven to no longer be dependent on the k in the outer summation so we can interchange the summations as such .
+    \begin{align*}
+      \sum_{k=0}^d\sum_{r=0}^{d+e}{d \choose k}{e \choose r-k}x^{r}=\sum_{r=0}^{d+e}\sum_{k=0}^d{d \choose k}{e \choose r-k}x^{r}
+    \end{align*}
+    We wish to now switch the summation in the left hand side. Note that this is a legal operation since regardless if r $\geq$ then d we would have to subtract a summation with a binomial coefficient whose selection is greater than the base evaluating to zero or if $r<m$  we would have the previous problem of a negative factorial which evaluates to zero when placed in the denominator. $\tf$
+    \begin{align*}
+      \sum_{r=0}^{d+e}\sum_{k=0}^d{d \choose k}{e \choose r-k}x^{r}=\sum_{r=0}^{d+e}\sum_{k=0}^r{d \choose k}{e \choose r-k}x^{r}
+    \end{align*}
+    Replacing our variables with the ones given in the question:
+    \[
+      r=k, k=j:
+    \]
+    \[
+      \sum_{k=0}^{d+e}\sum_{j=0}^k{d \choose j}{e \choose k-j}x^{k}
+    \]
+    note that the binomial expansion of:
+    \[
+      (1+t)^{e+d}=\sum_{k=0}^{d+e}{d+e \choose k}x^k
+    \]
+    we see that the claim
+    \begin{align*}
+      &(1+t)^d(1+t)^e)=(1+t)^{e+d}\\
+      &  \sum_{k=0}^{d+e}\sum_{j=0}^k{d \choose j}{e \choose k-j}x^{k}=\sum_{k=0}^{d+e}{d+e \choose k}x^k
+    \end{align*}
+    observing the coeffient of the term$ x^k$ we then conclude that
+    \[
+      \sum_{j=0}^k{d \choose j}{e \choose k-j}={d+e \choose k}
+    \]
+\end{proof}\\
+
+\sect{Problem 6}
+\begin{proof}
+  A manufacture has nine distinct motors in stock two of which came from a particular supplier. The motors must be divided among three production lines, with three motors going to each line. If the assignment of motors to lines is random, find the probability that both motors from the particular supplier are assigned to the first line. \\
+  First there will be seven motors that will need to be distributed to three distinct subsets of the total quantity yeilding:
+  \[
+    \frac{7!}{1!3!3!}
+  \]
+  In total there are nine motors each being place in different lines grouped by three.
+  \[
+    \frac{9!}{3!3!3!}
+  \]
+  \[
+    P(\text{two motors in the first})=\frac{\frac{7!}{1!3!3!}}{    \frac{9!}{3!3!3!}}=.083333
+  \]
+\end{proof}\\
+
+\sect{Problem 7}
+\begin{proof}
+  A balanced die is tossed six times, and the number on the uppermost face is recored each time. What is the p that the numbers recorded are 1,2,3,4,5,6 in any order. \\
+  Since the amount of available numbers shrinks with each roll this probabiliy can be described by the following where A is our event:
+  \[
+    P(A)=\prod_{k=1}^6 \frac{k}{6}=.015432
+  \]
+\end{proof}\\
+
+\sect{Problem 8}
+\begin{proof}
+  Five fair dice are rolled. What is the probability that the faces showing sonstitute a full house that is three faces show one number and two faces show a second number. \\
+  Consider the number of faces we start with . There are six possible selections starting with the first roll. the following three must be the same and the next dice then has five remaining to pick from. Finally the last dice must mirror the second to last. Expressing this number as a product through the fundemental theorem of counting we get the following:
+  \[
+     6(5)(1)(1)(1)(1)=30.
+  \]
+  The total number of ways to roll the dice is $6^5$ power as there are five dice. Thus the probability is the ratio of these two values
+  \[
+    P(A)=\frac{30}{6^5}\approx.39
+  \]
+\end{proof}\\
+
+\sect{Problem 9}
+\begin{proof}
+  Five cards are dealt from a standard 52 card deck. What is the p that the sum of the faces on five cards is 48 or greater. What are the possible ways to get 48 or more from five cards?\\
+  10,10,10,9,9. 10 10 10 10 8. 10 10 10 10 9 . Given we are choosing five cards total the probability is:
+  \[
+    P(A)=\frac{{4 \choose 3}{4 \choose 2}+{ 4\choose 4}{4\choose 1}+{4 \choose 4}{4 \choose 1}}{{52 \choose 5}}
+  \]
+  =.000012
+\end{proof}\\
+\end{document}
