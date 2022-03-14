@@ -1,0 +1,122 @@
+\documentclass[12pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\pagestyle{empty}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 425  Lecture 6 }
+\date{3/8/2022}
+
+\topmargin -0.6in
+\headsep 0.40in
+\oddsidemargin 0.0in
+\textheight 9.0in
+\textwidth 6.5in
+
+\newcommand{\econst}{\mathrm{e}}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\dwrt}[1]{\frac{\diff}{\diff #1}}
+%%%%%%Macros for 425%%%%%%%%%%%%%%%%%%%
+\newcommand{\q}{\quad}
+\newcommand{\tab}{\\\\}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\sect}[1]{\section*{#1}}
+
+%%%%%%Vector Spaces%%%%%%%%%%%%%%%%%%%
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\rtwo}{\mathbb{R}^2}
+\newcommand{\mxn}{{mxn}}
+
+%%%%%%Sets and common phrases%%%%%%%%%
+\newcommand{\Axb}{\textbf{Ax=b} }
+\newcommand{\Axz}{\textbf{Ax=0} }
+\newcommand{\dim}{\text{dim}}
+\newcommand{\lc}{linear combination }
+\newcommand{\let}{\text{Let }}
+\newcommand{\tf}{\therefore}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\everymath={\displaystyle}
+
+\begin{document}
+\maketitle
+
+\sect{continuous random variables}
+A discrete random variable is a variable of the form:
+\newcommand{\rv}{random variable }
+\[
+  X:\mathcal{S}\mapsto \R
+\]
+Where $\mathcal{S}$ is a discrete sample space
+\[
+  P(x_i)=P(X=x_i)=P(\{s:X(s)=x_i\})
+\]
+For continuous \rv this means that
+\[
+  \mathcal{S}=\R \text{ or } \mathcal{S}\subset \R
+\]
+\textbf{Example}\\
+Let $y_1,y_2,..,y_n$ be a set of measurements . Let n =40. Assigning arbitrary data for these points we can construct a histogram. This is used to discretize data and visualize frequency.
+\\
+\textbf{frequency} The number of times an event occurs. \\
+\textbf{Relative frequency (w)}
+\[
+  \frac{f}{\mathcal{S}}
+\]
+where f is frequency\\
+\textbf{Density}
+\[
+  \frac{w}{l}
+\]
+where l is the length of each bin on ths histogram.\\
+When you decrease the size of the bins in a progressively shrinking density function the behavior of the histogram can be described by a function;;
+\\
+When this is accomplished we can describe a function f(x) such that :
+\[
+  \int_{-\infty}^\infty f(x)dx=1
+\]
+\[
+  f(x)\geq 0
+\]
+\[
+  \int_a^b f(x)dx=P(a\leq y\leq b)
+\]
+\newcommand{\cont}{continuous }
+\sect{Continuous \rv}
+Let Y be a function from a sample space S to $\R$. The function Y is called a continuous random variable if there exists a function f(y) such that for all real numbers a and b such that $a<b$
+\[
+    P(a\leq y\leq b)=\int_a^b f(y)dy
+\]
+In this event f(y) is called a probability density function (pdf) for a \cont \rv\\
+The function f(y) is a pdf for some \cont \rv y $\iff$ the following conditions are met.
+\begin{align*}
+  &f(y) \geq 0\\
+  & \int_{-\infty}^\infty f(x)dx=1
+\end{align*}
+
+\sect{Common distributions}
+\textbf{Uniform distribution}\\
+\[
+  f(y)=c\quad \forall y : a \leq y \leq b \\ \quad \quad
+  f(y)=0 \text{ otherwise}
+\]
+\\\\
+\textbf{Exponential distribution}
+\[
+  f(y)=\lambda e^{-\lambda y} \text{ if }y \geq 0
+\]
+and zero otherwise. $\lambda >0$\\
+\textbf{Normal distribution}\\
+\[
+  f(y)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(y-\mu)^2}{2\sigma^2}}
+\]
+
+\sect{cumulative distribution function}
+\[
+  F_y(t)=P(y \leq t)=\int_{-\infty}^tf(y) dy
+\]
+\[
+  \frac{d}{dx}F_y(t)=f(t)
+\]
+\end{document}
