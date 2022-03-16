@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\pagestyle{empty}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 440 Homework 6 }
+\date{3/10/2022}
+
+\topmargin -0.6in
+\headsep 0.40in
+\oddsidemargin 0.0in
+\textheight 9.0in
+\textwidth 6.5in
+
+\newcommand{\econst}{\mathrm{e}}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\dwrt}[1]{\frac{\diff}{\diff #1}}
+%%%%%%Macros for 425%%%%%%%%%
+\newcommand{\q}{\quad}
+\newcommand{\tab}{\\\\}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\sect}[1]{\section*{#1}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\rtwo}{\mathbb{R}^2}
+\newcommand{\mxn}{{mxn}}
+
+\newcommand{\Axb}{\textbf{Ax=b} }
+\newcommand{\Axz}{\textbf{Ax=0} }
+\newcommand{\dim}{\text{dim}}
+\newcommand{\lc}{linear combination }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\everymath={\displaystyle}
+
+
+\begin{document}
+\maketitle
+
+\sect{3.4.6}
+\begin{proof}
+  Let n be  postive integer, show that $f(y)=(n+2)(n+1)y^n(1-y), 0\leq y leq 1$ is a pdf\\
+  \begin{align*}
+    &\int_0^1(n+2)(n+1)y^n(1-y)dy=1\\
+    &(n+2)(n+1)\int_0^1y^n(1-y)dy=1\\
+    &(n+2)(n+1)\int_0^1 y^n-y^{n+1}dy=1\\
+    &(n+2)(n+1)\Big[\int_0^1 y^ndy-\int_0^1y^{n+1}dy\Big]=1\\
+    &(n+2)(n+1)\Big[ \frac{y^{n+1}}{n+1}|_0^1-\frac{y^{n+2}}{n+2}|_0^1\Big]=1\\
+    &(n+2)(n+1)\Big[ \frac{1}{n+1}-\frac{1}{n+2}\Big]=1\\
+    &(n+2)(n+1)\Big[ \frac{n+2-n+1}{(n+1)(n+2)}\Big]=1\\
+    &n+2-n+1=1\\
+    &1=1
+  \end{align*}
+\end{proof}\\
+\sect{3.4.9}
+\begin{proof}
+  \[
+    F_Y(y)=\int_{-\infty}^yf_Y(t))dy\\
+  \]
+  \begin{align*}
+    &\forall y>0\\
+    &F_Y(y)=\int_{-1}^y1-|t|dt\\
+    &\int_{-1}^01+tdt+\int_{0}^y1-tdt\\
+    &F_Y(y)=(t+\frac{t^2}{2}\Big|_{-1}^0)+(t-\frac{t^2}{2}\Big|_{0}^y)\\
+    &F_Y(y)=1-\frac{1}{2}+y-\frac{y^2}{2}\\
+  \end{align*}
+  \begin{align*}
+    &\forall y\leq 0\\
+    &F_Y(y)=\int_{-1}^y1-|t|dt\\
+    &\int_{-1}^y1+tdt\\
+    &F_Y(y)=t+\frac{t^2}{2}\Big|_{-1}^y\\
+    &F_Y(y)=\frac{1}{2}+y+\frac{y^2}{2}\\
+  \end{align*}
+  Thus, $F_Y(y)$=0 $\quad\quad\forall y<-1$\\ $F_Y(y)=\frac{1}{2}+y+\frac{y^2}{2} \quad\quad\forall y, -1\leq y \leq 0$ \\$F_Y(y)=1-\frac{1}{2}+y-\frac{y^2}{2}\quad\quad \forall y, 0<y\leq 1$ \\and 1 for all y greater than one
+\end{proof}\\
+\sect{3.4.14}
+\begin{proof}
+  \begin{align*}
+    &F_Y(y)=\int_0^yte^{-t}dt\\
+    &let u=t,du =1, dv=e^{-t}, v=-e^{-t}\\
+    &F_Y(y)=\int_0^yte^{-t}dt=-te^{-t}+\int e^{-t}dt\\
+    &F_Y(y)=\int_0^yte^{-t}dt=-te^{-t}-e^{-t}\\
+    &F_Y(y)=-te^{-t}-e^{-t}\Big|_0^y\\
+    &F_Y(y)=-ye^{-y}-e^{-y}+1\\
+  \end{align*}
+\end{proof}\\
+\end{document}
