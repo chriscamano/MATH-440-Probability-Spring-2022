@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\pagestyle{empty}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 440  Lecture 7 }
+\date{3/29/2022}
+
+\topmargin -0.6in
+\headsep 0.40in
+\oddsidemargin 0.0in
+\textheight 9.0in
+\textwidth 6.5in
+
+\newcommand{\econst}{\mathrm{e}}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\dwrt}[1]{\frac{\diff}{\diff #1}}
+%%%%%%Macros for 425%%%%%%%%%%%%%%%%%%%
+\newcommand{\q}{\quad}
+\newcommand{\tab}{\\\\}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\sect}[1]{\section*{#1}}
+
+%%%%%%Vector Spaces%%%%%%%%%%%%%%%%%%%
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\rtwo}{\mathbb{R}^2}
+\newcommand{\mxn}{{mxn}}
+
+%%%%%%Sets and common phrases%%%%%%%%%
+\newcommand{\Axb}{\textbf{Ax=b} }
+\newcommand{\Axz}{\textbf{Ax=0} }
+\newcommand{\dim}{\text{dim}}
+\newcommand{\lc}{linear combination }
+\newcommand{\let}{\text{Let }}
+\newcommand{\tf}{\therefore}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\everymath={\displaystyle}
+
+
+\begin{document}
+\maketitle
+
+\sect{Joint densities}
+\newcommand{\jd}{Joint Density }
+Assume we have two random variables. X with some pdf $f_x(x)$ and y with pdf $f_y(y)$ It is not enough to have both of these pdfs when describing a relationship but when they are dependent on eachother we will need a multivariate distribution function. \\
+\textbf{Discrete Case}:\\
+Suppose S is a discrete sample space. this is to say finite or infinite countable, on which two random variables x and y are defined. \\
+\newcommand{\pdf}{Probability Denisty Function }
+The joint m\pdf of X and Y is defined as follows:
+\[
+  P_{XY}(X,Y)=P(\{s:X(s)=x,Y(s)=y\})
+\]
+\[
+  P(X=x,Y=y)
+\]
+Properties of joint probability:
+\begin{align*}
+  &p(x,y) \geq 0\\
+  &\sum_{\forall x \forall y}p(x,y)=1
+\end{align*}
+\textbf{Marginal pdf}\\
+The marginal \pdf is the distribution just for x or just for y \\
+Suppose that $P_{XY}(x,y)$ is a joint pdf  of discrete random variables (x,y). Then
+\[
+  P_X(x)\sum_{\forall y }P(x,y)
+\]
+\[
+  P_Y(y)=\sum_{\forall x }p(x,y)
+\]
+Where $P_X(x)$ and $P_Y(y)$ are marginal pdfs. \\
+
+Two random variables defined on the same sample space S of real numbers are jointly continuous if there exists a function f(x,y) such that for any region D $\in \R^2$:
+
+\[
+  P((X,Y)\in D)={\int\int}_Df_{XY}(x,y)dxdy
+\]
+Where $f_{XY}(x,y)$ is the joint pdf for (x,y)\\
+The function f(x,y) is a joint \df for some pair (x,y) of random variables iff :
+\begin{align*}
+  &f(x,y)\geq 0 \\
+  &\int_{-\infty}^\infty\int_{-\infty}^\infty f(x,y) dxdy=1
+\end{align*}
+\end{document}

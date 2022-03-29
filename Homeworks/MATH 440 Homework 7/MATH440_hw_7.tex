@@ -1,0 +1,150 @@
+\documentclass[12pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\pagestyle{empty}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 440  Homework 7 }
+\date{3/25/2022}
+
+\topmargin -0.6in
+\headsep 0.40in
+\oddsidemargin 0.0in
+\textheight 9.0in
+\textwidth 6.5in
+
+\newcommand{\econst}{\mathrm{e}}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\dwrt}[1]{\frac{\diff}{\diff #1}}
+%%%%%%Macros for 425%%%%%%%%%%%%%%%%%%%
+\newcommand{\q}{\quad}
+\newcommand{\tab}{\\\\}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\sect}[1]{\section*{#1}}
+
+%%%%%%Vector Spaces%%%%%%%%%%%%%%%%%%%
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\rtwo}{\mathbb{R}^2}
+\newcommand{\mxn}{{mxn}}
+
+%%%%%%Sets and common phrases%%%%%%%%%
+\newcommand{\Axb}{\textbf{Ax=b} }
+\newcommand{\Axz}{\textbf{Ax=0} }
+\newcommand{\dim}{\text{dim}}
+\newcommand{\lc}{linear combination }
+\newcommand{\let}{\text{Let }}
+\newcommand{\tf}{\therefore}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\everymath={\displaystyle}
+
+
+\begin{document}
+\maketitle
+\begin{center}
+  \textbf{3.5) 6,14,20,32}\\
+  \textbf{3.6) 8,12,18,20}\\
+\end{center}
+
+
+\sect{3.5.6}
+\begin{proof}
+  given a sample size \textbf{n=20} and a proability of defect \textbf{p=.04} the distibution of x can be modeled by a binomial distribution. Therefore
+  \[
+    E(X)=np=20(.04)=.8
+  \]
+\end{proof}\\
+\sect{3.5.14}
+\begin{proof}
+   Given a sample size of \textbf{n=15} observations we require a measurement of proability to discern the expected value within the given interval. the probability the continuous random variable x lies within the given interval can be found by integrating over the probability density function within the given bounds:
+   \[
+        \int_{\frac{1}{2}}^13y^2dy=3\int_{\frac{1}{2}}^1y^2dy=3(\frac{7}{24})=\frac{7}{8}
+    \]
+    \[
+      E(X)=np=15(\frac{7}{8})=13.125
+    \]
+
+\end{proof}\\
+\sect{3.5.20}
+\begin{proof}
+   Given:
+   \[
+    E(X)=\sum_{\forall k }2^kp_X(2^k)
+   \]
+   We can substitute the value for X represented as $2^k$ in the original example to yeild.
+   \[
+       E(X)=\sum_{\forall k }c^kp_X(2^k)
+   \]
+   as in this new problem the amount won each time can vary between 0 and 2 dollars raised to some power k. \\
+   Adjusting bounds yeilds:
+   \[
+      E(X)=\sum_{k=1}^\infty c^kp_X(2^k)=\sum_{k=1}^\infty c^k\frac{1}{2^k}=\sum_{k=1}^\infty \Big(\frac{c}{2}\Big)^k
+   \]
+   To use the sum of a geometric series rule we must start at k =0 therefore we will adjust the bounds of the sum.
+   \[
+    \sum_{k=1}^\infty \Big(\frac{c}{2}\Big)^k=\Big(\sum_{k=0}^\infty \Big(\frac{c}{2}\Big)^k\Big)-1
+   \]
+   as the difference between the sum from 0 and 1 is only 1..
+   Applying the geometric rule for convergent series:
+   \[
+     \frac{1}{1-\frac{c}{2}}-1=\frac{c}{2-c}
+   \]
+   \textbf{b)}\\
+   Letting the corresponding value of x correlate with a logarithm yeilds:
+   \[
+        E(X)=\sum_{\forall k }log2^kp_X(2^k)
+   \]
+   Adjusting bounds again:
+   \[
+        E(X)=\sum_{k=1 }^\infty log2^kp_X(2^k)
+   \]
+   Substituting probability:
+   \[
+     E(X)=\sum_{k=1 }^\infty log2^k\Big(\frac{1}{2}\Big)^k=\sum_{k=1 }^\infty \frac{log2^k}{2^k}=\sum_{k=1 }^\infty k\frac{log2}{2^k}=log2\sum_{k=1 }^\infty \frac{k}{2^k}
+   \]
+   https://math.stackexchange.com/questions/337937/why-sum-k-1-infty-frack2k-2
+\end{proof}\\
+\sect{3.5.32}
+\begin{proof}
+
+\end{proof}\\
+\sect{3.6.8}
+\begin{proof}
+  \textbf{a)}\\
+  \[
+    \int_1^\infty \frac{2}{y^3}=1
+  \]
+  \begin{align*}
+    &\int_1^\infty \frac{2}{y^3}dy=1\\
+    &2\lim_{b\rightarrow \infty}\int_1^b \frac{1}{y^3}dy=1\\
+    &2\lim_{b\rightarrow \infty} \frac{-1}{2y^2}\Big|_1^b=1\\
+    &-\lim_{b\rightarrow \infty} \frac{1}{y^2}\Big|_1^b=1\\
+    &-\lim_{b\rightarrow \infty}\Big(\frac{1}{b^2}-1)=1\\
+    &-\lim_{b\rightarrow \infty}\frac{1}{b^2}+\lim_{b\rightarrow \infty}1=1\\
+    &1=1
+  \end{align*}
+  \textbf{b)}\\
+  \[
+    E(X)=\int_1^\infty y(\frac{2}{y^3})dy=\int_1^\infty \frac{2}{y^2}dy=\lim_{b\rightarrow \infty}\int_1^b2y^{-2}dy=\lim_{b\rightarrow \infty}\frac{-2}{y}\Big|_1^b=2
+  \]
+  \textbf{c)}\\
+  To calculate variance we must fisrst calculate the expected value for the random variable squared.
+  \[
+    E(Y^2)=\int_1^by^2(\frac{2}{y^3}dy)=\lim_{b\rightarrow \infty}2ln(y)\Big|_1^b=\infty
+  \]
+  since part of the required computation for the varianve is infinite the variance cannot be measured in a finite manner.
+\end{proof}\\
+\sect{3.6.12}
+\begin{proof}
+
+\end{proof}\\
+\sect{3.6.18}
+\begin{proof}
+
+\end{proof}\\
+\sect{3.6.20}
+\begin{proof}
+
+\end{proof}\\
+\end{document}

@@ -1,0 +1,259 @@
+\documentclass[12pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\pagestyle{empty}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH425  Lecture 12}
+\date{3/8/2022}
+\topmargin -0.6in
+\headsep 0.40in
+\oddsidemargin 0.0in
+\textheight 9.0in
+\textwidth 6.5in
+
+\newcommand{\econst}{\mathrm{e}}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\dwrt}[1]{\frac{\diff}{\diff #1}}
+%%%%%%Macros for 425%%%%%%%%%
+\newcommand{\q}{\quad}
+\newcommand{\tab}{\\\\}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\sect}[1]{\section*{#1}}
+\newcommand{\bb}[1]{\mathbb*{#1}}
+\newcommand{\cal}[1]{\mathcal*{#1}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\rtwo}{\mathbb{R}^2}
+\newcommand{\mxn}{{mxn}}
+
+\newcommand{\Axb}{\textbf{Ax=b} }
+\newcommand{\Axz}{\textbf{Ax=0} }
+\newcommand{\dim}{\text{dim}}
+\newcommand{\lc}{linear combination }
+\newcommand{\tf}{\therefore}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+
+\sect{Section 3.2: Problems 10,12, 14, 16, 20, 22
+27, 28,30, 36}
+\textbf{Problem 3.2-10}\\
+\begin{proof}
+   Both instances can be modled by a binomial distribution. The probability of surviving on the plane is correlated with not getting hit at all or getting hit only once. For the boat the probability of surviving is associated with not getting hit at all, thus
+   \[
+     P(\text{survive on boat})~binom(10,.05,0)=.598736
+   \]
+   \[
+     P(\text{survive on plane})=\sum_{k=0}^1 binom(6,.2,k)=.65536
+   \]
+   I would rather be on the plane! this makes logical sense.
+\end{proof}\\\\
+\textbf{Problem 3.2-12}\\
+\begin{proof}
+  Let:
+  \[
+    P(x\geq 7)=\sum_{k=7}^{12} {12 \choose k} \frac{1}{2}^k\frac{1}{2}^{12-k}
+  \]
+  To have the study discredited there must be less than 7 results therfore we will take the complement of this expression:
+  \[
+    1-\sum_{k=7}^{12} {12 \choose k} \frac{1}{2}^k\frac{1}{2}^{12-k}=.612793
+  \]
+\end{proof}\\\\
+\textbf{Problem 3.2-14}\\
+\begin{proof}
+  Since the bunker occupies only 30 of the 500 feet the probability of hitting the bunker is the ratio of its size compared to the entire beach:
+  \[
+    p=\frac{30}{500}
+  \]
+  This problem is then modled by a binomial distribution
+  \[
+    P(destroyed)=\sum_{k=3}^{25}{25 \choose k}.06^k(.94)^{25-k}=.187105
+  \]
+\end{proof}\\
+\textbf{Problem 3.2-16}\\
+\begin{proof}
+  First off this question is very poorly written as it assumes the reader knows the criteria for winning the world series! Anyways, I found that to win you need to win 4/7 games.
+  \\The probability of winning four games in a row is (4 game series)
+  \[
+    p(x=4)={4 \choose 4}.5^4(.5)^0
+  \]
+  Either team can win so the probability of this occuring is
+  \[
+    2({4 \choose 4}.5^4(.5)^0)=2(.5^4)=.5^3=.125
+  \]
+  \\The probability of winning three games then winning the fifth is (5 game series)
+  \[
+    p(x=3)={4 \choose 3}.5^3(.5)^1 (.5)
+  \]
+  Either team can win so the probability of this occuring is
+  \[
+    2(.5)({4 \choose 3}.5^3(.5)^1=4(.5^4)=.25
+  \]
+  \\The probability of winning three of the first five games then winning the sixth is
+  \[
+    p(x=3)={5 \choose 3}.5^3(.5)^2 (.5)
+  \]
+  Either team can win so the probability of this occuring is
+  \[
+    2(({5 \choose 3}.5^3.5^2).5)={5 \choose 3}.5^5=.3125
+  \]
+  Finally the probability of winning the first three games, loosing the next three then winning the last game is the following.
+  \[
+    p(x=3)={6\choose 3}.5^6(.5)
+  \]
+  Either team can win so the probability of this occuring is
+  \[
+    2(.5){6\choose 3}.5^6={6\choose 3}.5^6=.3125
+  \]
+  Finally there is the part of this question realted to compairson to expected values.
+  \begin{align*}
+    & 64(.125)=8\
+    & 64(.25)=16\\
+    & 64(.3125)=20\\
+    & 64(.3125)=20\\
+  \end{align*}
+  The model fits the data quite poorly with most answers appearing to be be more than one stdev away from expected value.
+\end{proof}\\\\
+\textbf{Problem 3.2-20}\\
+\begin{proof}
+  N=12,n=5,M=4,k=2
+
+  \[
+    x\sim hypg(N,n,M,k)=\frac{{M \choose k}{N-M \choose n-k}}{{N \choose n}}
+  \]
+  \[
+    p(x=2)=\frac{{4 \choose 2}{12-4 \choose 5-2}}{{12 \choose 5}}=.4242
+  \]
+\end{proof}\\\\
+\textbf{Problem 3.2-22}\\
+\begin{proof}
+  k=k,M=514,N=4050,n=65:
+  \[
+    P(x=k)=  x\sim hypg(N,n,M,k)=\frac{{514 \choose k}{4050-514 \choose 65-k}}{{4050 \choose 65}}
+  \]
+\end{proof}\\
+\textbf{Problem 3.2-27}\\
+\begin{proof}
+  For the first gem selection assums she selects a real gem out of the three chosen. This is described by:
+
+  \[
+    \frac{{10 \choose 1}{25 \choose 2}}{{35 \choose 3}}
+  \]
+  Now for the last gem we are only interested in the probability of selecting a real gem, described by;
+  \[
+      \frac{{9 \choose 1}{23 \choose 0}}{{32 \choose 1}}
+  \]
+  Together these describe the event we are interested in. In which the burglar picks 3 gems 1 of which is real two of which are fake and the last being real.
+  \[
+    \frac{{10 \choose 1}{25 \choose 2}}{{35 \choose 3}}  \frac{{9 \choose 1}{23 \choose 0}}{{32 \choose 1}}
+  \]
+\end{proof}\\
+\textbf{Problem 3.2-28}\\
+\begin{proof}
+  Note that this is the exact problem setup for the original definition of hypergeomertic probability given in the text. Given N balls and n are chosen this described the sample space and will consitute the denominator of the probability statement. The effect of choosing choosing k red balls will effect both the number of red balls in the urn as well as the the amount of white balls being chosen. this together takes us to the expression:
+  \[
+    \frac{{r \choose k}{w \choose n-k}}{{N \choose n}}
+  \]
+\end{proof}\\
+\textbf{Problem 3.2-30}\\
+\begin{proof}
+  \[
+    \frac{{r \choose k+1}{w \choose n-k-1}}{{N \choose n}} \div \frac{{r \choose k}{w \choose n-k}}{{N \choose n}}=\frac{{r \choose k+1}{w \choose n-k-1}}{{r \choose k}{w \choose n-k}}
+  \]
+  \begin{align*}
+    &\frac{\frac{r!}{(k+1)!(r-k-1)!}\frac{w!}{(n-k-1)!(w-n+k+1)!}}{\frac{r!}{k!(r-k)!}\frac{w!}{(n-k)!(w-n+k)!}}\\\\
+    &\frac{\frac{r!w!}{(k+1)!(r-k-1)!(n-k-1)!(w-n+k+1)!}}{\frac{r!w!}{k!(r-k!)(n-k!)(w-n+k!)}}\\\\
+    &\frac{k!(r-k!)(n-k!)(w-n+k!)}{(k+1)!(r-k-1)!(n-k-1)!(w-n+k+1)!}\\\\
+    &\frac{(r-k!)(n-k)(w-n+k!)}{(k+1)(r-k-1)!(w-n+k+1)!}\\\\
+    &\frac{(r-k!)(n-k)}{(k+1)(r-k-1)!(w-n+k+1)}\\\\
+    &\frac{(r-k)(n-k)}{(k+1)(w-n+k+1)}\\\\
+  \end{align*}
+
+\end{proof}\\
+\textbf{Problem 3.2-36}\\
+\begin{proof}
+  N=16, f=5,s=4,j=4,s=3,n=8
+
+  \[
+    P(2 in each)=\frac{{5 \choose 2}{4\choose 2}{4 \choose 2}{3\choose 2}}{{16\choose 8}}=.083916
+  \]
+\end{proof}\\
+
+\sect{Section 3.3: Problems 2, 8, 14}
+\textbf{Problem 3.3-2}\\
+\begin{proof}
+  a) find $p_x(k)$:\\
+\begin{align*}
+  &s=\{(1,1),(1,2),(1,3),(1,4),(1,5),(2,1),(2,2),(2,3)\\
+  &,(2,4),(2,5),(3,1),(3,2),(3,3)(3,4),(3,5),(4,1),(4,2),(4,3),(4,4)(4,5),\\
+  &(5,1),(5,2),(5,3),(5,4),(5,5) \}
+\end{align*}
+each outcome in the sample space has equal probability.
+\begin{align*}
+&  p(k=5)=\frac{9}{25}\\
+&  p(k=4)=\frac{7}{25}\\
+&  p(k=3)=\frac{5}{25}\\
+\end{align*}
+\[
+  P(x=k)=\frac{2k-1}{25}
+\]
+\\
+b) Find $p_v(k)$\\
+\begin{align*}
+  &s=\{(1,1),(1,2),(1,3),(1,4),(1,5),(2,1),(2,2),(2,3)\\
+  &,(2,4),(2,5),(3,1),(3,2),(3,3)(3,4),(3,5),(4,1),(4,2),(4,3),(4,4)(4,5),\\
+  &(5,1),(5,2),(5,3),(5,4),(5,5) \}
+\end{align*}
+\begin{align*}
+&  p(k=10)=\frac{1}{25}\\
+&  p(k=9)=\frac{2}{25}\\
+&  p(k=8)=\frac{3}{25}\\
+&  p(k=7)=\frac{4}{25}\\
+&  p(k=6)=\frac{5}{25}\\
+&  p(k=5)=\frac{4}{25}\\
+&  p(k=4)=\frac{3}{25}\\
+&  p(k=3)=\frac{2}{25}\\
+&  p(k=2)=\frac{1}{25}\\
+\end{align*}
+The probability is not coninuously increasing instead behaving in 2 distinct ways.For values greater than seven it can be seen that the probability is $\frac{11-k}{25}$. For values of k less than 7 the distribution of probability is $\frac{k-1}{25}$
+\end{proof}\\
+
+\textbf{Problem 3.3-8}\\
+\begin{proof}
+since there are 4 moves and 2 states there are $2^4$ or 16 possible ways for the particle to move. Since each of these movements corresponds to a change in the x coordinate we know since the number moves is even that for all pairs of 4 moves the final answer will also be even as you cannot arrive to an odd number with an even number of steps.
+Since each arrangement of left or right movement has an equal probability of occuring $\frac{1}{16}$ the pdf is a piecewise function as we cannot have odd values.
+
+\begin{align*}
+  &{LLLL, RLLR, RLRL, RLRR, RRLL, RRLR, RRRL,\\
+  &  LRLR, LRRL, LRRR
+RLLL,RRRR LLLR, LLRL, LLRR, LRLL,}
+\end{align*}
+\begin{align*}
+  & P(4)=\frac{1}{16} \textbf{ 4R}\\
+  & P(2)=\frac{4}{16}\textbf{ 3R1L}\\
+  & P(0)=\frac{6}{16}\textbf{ 2R2L}\\
+  & P(-2)=\frac{4}{16}\textbf{ 1R3L}\\
+  & P(-4)=\frac{1}{16}\textbf{ 4l}\\
+\end{align*}
+
+\end{proof}\\
+
+\textbf{Problem 3.3-14}\\
+\begin{proof}
+\[
+  F_x(x)=\frac{x^2+x}{42}
+\]
+\[
+  f_x(X)=F(x)-F(x-1)=\frac{x^2+x}{42}-\frac{(x-1)(x))}{42}
+\]
+\[
+  =\frac{x^2+x-x^2+x}{42}=\frac{x}{21}
+\]
+\[
+  \sum_{x=0}^6\frac{x}{21}=1
+\]
+\end{proof}\\
+
+\end{document}
