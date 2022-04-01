@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.21)  25 MAR 2022 19:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.21)  31 MAR 2022 17:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -289,225 +289,213 @@ or  <return>  to continue without it.
 
 {c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-./MATH440_hw_7.tex:107: LaTeX Error: \begin{document} ended by \end{proof}.
+./MATH440_hw_7.tex:113: LaTeX Error: \begin{document} ended by \end{proof}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.107 \end{proof}
+l.113 \end{proof}
                  \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--108
+Underfull \hbox (badness 10000) in paragraph at lines 110--114
 
  []
 
 
-./MATH440_hw_7.tex:109: LaTeX Error: Environment proof undefined.
+./MATH440_hw_7.tex:115: LaTeX Error: Environment proof undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.109 \begin{proof}
+l.115 \begin{proof}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
-
-
-./MATH440_hw_7.tex:111: LaTeX Error: \begin{document} ended by \end{proof}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.111 \end{proof}
-                 \\
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./MATH440_hw_7.tex:112: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.112 \sect
-           {3.6.8}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./MATH440_hw_7.tex:113: LaTeX Error: Environment proof undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.113 \begin{proof}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 114--115
-
- []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 126--128
+
+./MATH440_hw_7.tex:125: LaTeX Error: \begin{document} ended by \end{proof}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.125 \end{proof}
+                 \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--126
 
  []
 
 
-./MATH440_hw_7.tex:137: LaTeX Error: \begin{document} ended by \end{proof}.
+./MATH440_hw_7.tex:127: LaTeX Error: Environment proof undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137 \end{proof}
-                 \\
+l.127 \begin{proof}
+                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--138
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
  []
 
 
-./MATH440_hw_7.tex:139: LaTeX Error: Environment proof undefined.
+Underfull \hbox (badness 10000) in paragraph at lines 140--142
+
+ []
+
+
+./MATH440_hw_7.tex:151: LaTeX Error: \begin{document} ended by \end{proof}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.139 \begin{proof}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./MATH440_hw_7.tex:141: LaTeX Error: \begin{document} ended by \end{proof}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.141 \end{proof}
+l.151 \end{proof}
                  \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./MATH440_hw_7.tex:142: LaTeX Error: There's no line here to end.
+Underfull \hbox (badness 10000) in paragraph at lines 149--152
+
+ []
+
+[3]
+
+./MATH440_hw_7.tex:153: LaTeX Error: Environment proof undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.142 \sect
-           {3.6.18}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./MATH440_hw_7.tex:143: LaTeX Error: Environment proof undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.143 \begin{proof}
+l.153 \begin{proof}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./MATH440_hw_7.tex:145: LaTeX Error: \begin{document} ended by \end{proof}.
+Overfull \hbox (4.76663pt too wide) detected at line 164
+\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 Y > [] \OT1/cmr/m/n/12 + 2[
+]] = \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 Y > [] \OT1/cmr/m/n/12
+ + 2[]] = \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 Y > \OT1/cmr/m/n/
+12 1] = 1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 [\OML/cmm/m/it
+/12 y \OMS/cmsy/m/n/12 ^^T \OT1/cmr/m/n/12 1] = 1 \OMS/cmsy/m/n/12 ^^@ \OT1/cmr
+/m/n/12 2 [][] \OML/cmm/m/it/12 e[]dy \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 :\OT1/
+cmr/m/n/12 135335
+ []
+
+
+./MATH440_hw_7.tex:165: LaTeX Error: \begin{document} ended by \end{proof}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.145 \end{proof}
+l.165 \end{proof}
                  \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./MATH440_hw_7.tex:146: LaTeX Error: There's no line here to end.
+Underfull \hbox (badness 10000) in paragraph at lines 164--166
+
+ []
+
+
+./MATH440_hw_7.tex:167: LaTeX Error: Environment proof undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.146 \sect
-           {3.6.20}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./MATH440_hw_7.tex:147: LaTeX Error: Environment proof undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.147 \begin{proof}
+l.167 \begin{proof}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./MATH440_hw_7.tex:149: LaTeX Error: \begin{document} ended by \end{proof}.
+./MATH440_hw_7.tex:199: LaTeX Error: \begin{document} ended by \end{proof}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.149 \end{proof}
+l.199 \end{proof}
                  \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./MATH440_hw_7.tex:150: LaTeX Error: There's no line here to end.
+Underfull \hbox (badness 10000) in paragraph at lines 198--200
+
+ []
+
+[4]
+
+./MATH440_hw_7.tex:201: LaTeX Error: Environment proof undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.150 \end
-          {document}
+l.201 \begin{proof}
+                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[3] (./MATH440_hw_7.aux) ) 
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 225.
+
+[5]
+
+./MATH440_hw_7.tex:236: LaTeX Error: \begin{document} ended by \end{proof}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.236 \end{proof}
+                 \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--237
+
+ []
+
+[6] (./MATH440_hw_7.aux) ) 
 Here is how much of TeX's memory you used:
  2384 strings out of 478542
  31505 string characters out of 5854402
- 334312 words of memory out of 5000000
+ 335312 words of memory out of 5000000
  20326 multiletter control sequences out of 15000+600000
  411886 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -521,11 +509,12 @@ f-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y8.pfb>
-Output written on MATH440_hw_7.pdf (3 pages, 108726 bytes).
+y6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:
+/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on MATH440_hw_7.pdf (6 pages, 136403 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 83 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

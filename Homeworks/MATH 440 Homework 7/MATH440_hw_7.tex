@@ -103,11 +103,25 @@
    \[
      E(X)=\sum_{k=1 }^\infty log2^k\Big(\frac{1}{2}\Big)^k=\sum_{k=1 }^\infty \frac{log2^k}{2^k}=\sum_{k=1 }^\infty k\frac{log2}{2^k}=log2\sum_{k=1 }^\infty \frac{k}{2^k}
    \]
-   https://math.stackexchange.com/questions/337937/why-sum-k-1-infty-frack2k-2
+   \begin{align*}
+     &log2\sum_{k=1 }^\infty \frac{k}{2^k}=\\
+     &log2\sum_{k=1 }^\inf ty k(\frac{1}{2})^k=\\
+     &log2\frac{.5}{(1-.5)^2}=2log2=.6021
+   \end{align*}
+   For more information regarding why the infinite sum of k over $2^k$ follows the convention of $\frac{x}{(1-x)^2}$ see
+  https://math.stackexchange.com/questions/1072038/infinite-series-sum-k-1-infty-frack2k-and-sum-k-1-infty-frack
 \end{proof}\\
 \sect{3.5.32}
 \begin{proof}
-
+  \[
+    f_Y(y)=6y(1-y)
+  \]
+  \begin{align*}
+    &E(5Y^2)=5\int_0^1y^26y(1-y)dy=\\
+    &E(5Y^2)=5\int_0^1 6y^3-6y^4dy=\\
+    &E(5Y^2)=5[\frac{6y^4}{4}-\frac{6y^5}{5}\Big|_0^1]=1.5
+  \end{align*}
+  For these dimensions the expected value should be 1.5. Since this a problem of volume I suppose it should be 1.5 inches cubed.
 \end{proof}\\
 \sect{3.6.8}
 \begin{proof}
@@ -137,14 +151,87 @@
 \end{proof}\\
 \sect{3.6.12}
 \begin{proof}
-
+  for an exponential distribution:
+  \[
+    E(x)=\frac{1}{\lambda} \quad V(x)=\frac{1}{\lambda^2}
+  \]
+  therefore:
+  \[
+    P[Y>E(Y)+2\sqrt{V(Y)}]=P[Y>\frac{1}{\lambda}+2\sqrt{\frac{1}{\lambda^2}}]
+  \]
+  \[
+  P[Y>\frac{1}{\lambda}+2\sqrt{\frac{1}{\lambda^2}}]=P[Y>\frac{1}{2}+2\sqrt{\frac{1}{4}}]=P[Y>1]=1-P[y\leq 1]=1-2\int_0^1e^{-2y}dy=.135335
+  \]
 \end{proof}\\
 \sect{3.6.18}
 \begin{proof}
+  For a uniform dist. $f_Y(y)=\frac{1}{b-a}$ or in this case  $f_Y(y)=\frac{1}{3}$. To compute the expected value and variance of this function we will use the short cut results acquired through integration :
+  \[
+    E(X)=\frac{a+b}{2}\quad V(X)=\frac{(a-b)^2}{12}
+  \]
+  in this case:
+  \[
+    E(X)=\frac{11}{2}\quad V(X)=\frac{3}{4}
+  \]
+  By linearity:
+  \begin{align*}
+    &E(W_1)=.2281+.9948E(Y)\\
+    &E(W_1)=.2281+5.4714=\\
+    &E(W_1)=5.6995
+  \end{align*}
+  \begin{align*}
+    &V(W_1)=.9948^2V(Y)+V(E_1)\\
+    &V(W_1)=.74222+.0427=\\
+    &V(W_1)=.78492
+  \end{align*}
+  \begin{align*}
+    &E(W_2)=-.0748+1.0024E(Y)\\
+    &E(W_2)=-.0748+5.5132=\\
+    &E(W_2)=5.4384
+  \end{align*}
+  \begin{align*}
+    &V(W_2)=1.0024^2V(Y)+V(E_2)\\
+    &V(W_2)=.753604+.0159=\\
+    &V(W_2)=.769504
+  \end{align*}
 
+  It is clear that for the second procedure the expected value is close to the desired mean as the difference from the mean is less for procedure two compared to procedure 1. It can also be seen that procedure 2 yields a lower overall variance.
 \end{proof}\\
 \sect{3.6.20}
 \begin{proof}
-
+  First let us find the expected value for the given pdf:
+  \begin{align*}
+    &E(Y)=\mu=\int_0^\infty e^{-y}dy=\\
+    &\lim_{b\rightarrow \infty}\int_0^b e^{-y}dy=\lim_{b\rightarrow \infty}[\frac{e^{-b}}{-1}+1]=1
+  \end{align*}
+  using the shortcut formula for variance:
+  \[
+    V(X)=E(X^2)-[E(X)]^2
+  \]
+  we find:
+  \[
+    V(Y)=\lim_{ b\rightarrow \infty}\int_0^b y^2e^{-y}dy -1
+  \]
+  \begin{align*}
+    &y^2(-e^{-y})-\lim_{ b\rightarrow \infty}\int_0^b -2e^{-y}dy -1\\
+    &\lim_{ b\rightarrow \infty}y^2(-e^{-y})\Big|_0^b+2\lim_{ b\rightarrow \infty}\int_0^b e^{-y}dy -1\\
+    &=2\lim_{ b\rightarrow \infty}\int_0^b e^{-y}dy -1\\
+    &\text{Using the result from expected value}\\
+    &2(1)-1=1\\
+    &V(X)=\sigma^2=1
+  \end{align*}
+  From page 150:
+  \[
+    \text{Skew=}\mu_3^{'}=\frac{E[(W-\mu)^3]}{\sigma^3}=\frac{\sum_{j=0}^3 {3 \choose j}E(W^j)(-\mu)^{3-j}}{\sigma^3}=-1+3-6+1(E(W^3))
+  \]
+  \begin{align*}
+    &E(Y^3)=\lim_{ b\rightarrow \infty}\int_0^b y^3e^{-y}dy=\\
+    &-y^3e^3\Big|_0^\infty -\lim_{ b\rightarrow \infty}\int_0^b -3y^2e^{-y}dy=\\
+    &-y^3e^3\Big|_0^\infty +3[\lim_{ b\rightarrow \infty}\int_0^b y^2e^{-y}dy]\\
+    &=0+3(2)=6 \therefore:
+  \end{align*}
+  \[
+    \text{Skew}=-1+3-6+6=2
+  \]
 \end{proof}\\
 \end{document}
